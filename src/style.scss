@@ -5,7 +5,6 @@
 @import "tiny-slider/dist/tiny-slider.css";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -338,4 +337,11 @@ form label.error {
       font-style: italic;
     }
   }
+}
+
+// nav-link active
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  padding: 3rem;
+  background-color: red;
 }
