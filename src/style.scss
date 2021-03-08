@@ -54,6 +54,12 @@ h6,
   }
 }
 
+.speakers {
+  p {
+    font-size: 0.825rem;
+  }
+}
+
 // btn
 .btn-primary {
   background: #f20130;
@@ -80,6 +86,49 @@ h6,
   &:hover,
   &:active {
     background: #f20130;
+  }
+}
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link {
+  padding: 10px 38px !important;
+  margin: 1rem;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #033676;
+  padding: 10px 38px !important;
+  border-radius: 0;
+}
+a {
+  color: #033676;
+}
+.btn-forum {
+  background: #033676;
+  font-family: "Pt Sans", sans-serif;
+  text-transform: capitalize;
+  padding: 20px 38px !important;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-block !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 0;
+  line-height: 1;
+  -moz-user-select: none;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #033676;
+  overflow: hidden;
+  margin: 0;
+  &:hover,
+  &:active {
+    background: #033676;
   }
 }
 #site-container:before {
@@ -339,9 +388,8 @@ form label.error {
   }
 }
 
-// nav-link active
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  padding: 3rem;
-  background-color: red;
+//forum bullet point
+.session ul.speaker li {
+  list-style: outside;
+  margin-left: unset;
 }
