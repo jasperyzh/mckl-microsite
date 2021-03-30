@@ -168,6 +168,18 @@ a {
     font-size: 4rem;
   }
 }
+.masthead__desc {
+  text-shadow: 1px 1px 4px rgba(0,0,0,.3);
+  margin: 0 auto;
+  @include media-breakpoint-up(lg){
+    width: 75%;
+    margin-left: auto;
+    margin-right: initial;
+  }
+  @include media-breakpoint-up(xl){
+    width: 70%;
+  }
+}
 .masthead-aspect {
   aspect-ratio: 3 /4;
   @include media-breakpoint-up(sm) {
