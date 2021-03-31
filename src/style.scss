@@ -169,7 +169,7 @@ a {
   }
 }
 .masthead__desc {
-  text-shadow: 1px 1px 4px rgba(0,0,0,.3);
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   @include media-breakpoint-up(lg){
     width: 75%;
@@ -177,7 +177,7 @@ a {
     margin-right: initial;
   }
   @include media-breakpoint-up(xl){
-    width: 70%;
+    width: 50%;
   }
 }
 .masthead-aspect {
