@@ -301,6 +301,13 @@ a {
 .programme-box h6 {
   font-size: 0.925rem;
 }
+.programme-title {
+  font-size: 1.255rem;
+
+  @include media-breakpoint-up(sm){
+    font-size: inherit;
+  }
+}
 
 .form__container {
   background-color: #fff;
