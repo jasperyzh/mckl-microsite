@@ -4,68 +4,72 @@ import "bootstrap/dist/js/bootstrap.bundle";
 
 import { tns } from "tiny-slider/src/tiny-slider";
 
-//eventtracking
-let trackElements = [
-  {
-    "ga-about_mckl": { event_category: "menu bar", event_label: "about_mckl" },
-  },
-  {
-    "ga-scholarships": { event_category: "menu bar", event_label: "scholarships" },
-  },
-  {
-    "ga-programmes": { event_category: "menu bar", event_label: "programmes" },
-  },
-  {
-    "ga-enquire_today": { event_category: "menu bar", event_label: "enquire_today" },
-  },
-  {
-    "ga-scholarships_enquire": { event_category: "scholarships", event_label: "scholarships_enquire" },
-  },
-  {
-    "ga-fly_enquire": { event_category: "fly programme'", event_label: "fly_enquire" },
-  },
-  {
-    "ga-pre_u": { event_category: "programmes", event_label: "pre_u" },
-  },
-  {
-    "ga-diploma_degree": { event_category: "programmes", event_label: "diploma_degree" },
-  },
-  {
-    "ga-prof_accounting": { event_category: "programmes", event_label: "prof_accounting" },
-  },
-  {
-    "ga-prof_development": { event_category: "programmes", event_label: "prof_development" },
-  },
-  {
-    "ga-form_programme": { event_category: "registration", event_label: "programme" },
-  },
-  {
-    "ga-form_scholarships": { event_category: "registration", event_label: "scholarships" },
-  },
-  {
-    "ga-form_fly": { event_category: "registration", event_label: "fly" },
-  },
-  {
-    "ga-form_full_name": { event_category: "registration", event_label: "full_name" },
-  },
-  {
-    "ga-form_email": { event_category: "registration", event_label: "email" },
-  },
-  {
-    "ga-form_phone": { event_category: "registration", event_label: "phone" },
-  },
-  {
-    "gform-mckl__submit": { event_category: "registration", event_label: "submit" },
-  },
-];
+document.addEventListener('DOMContentLoaded', () => {
 
-trackElements.forEach(item => {
-  // console.log(Object.keys(item));
-  document.getElementById(Object.keys(item)).addEventListener("click", () => {
-    // console.log(item[Object.keys(item)]);
-    gtag("event", "click", item[Object.keys(item)]);
+  //eventtracking
+  let trackElements = [
+    {
+      "ga-about_mckl": { event_category: "menu bar", event_label: "about_mckl" },
+    },
+    {
+      "ga-scholarships": { event_category: "menu bar", event_label: "scholarships" },
+    },
+    {
+      "ga-programmes": { event_category: "menu bar", event_label: "programmes" },
+    },
+    {
+      "ga-enquire_today": { event_category: "menu bar", event_label: "enquire_today" },
+    },
+    {
+      "ga-scholarships_enquire": { event_category: "scholarships", event_label: "scholarships_enquire" },
+    },
+    {
+      "ga-fly_enquire": { event_category: "fly programme'", event_label: "fly_enquire" },
+    },
+    {
+      "ga-pre_u": { event_category: "programmes", event_label: "pre_u" },
+    },
+    {
+      "ga-diploma_degree": { event_category: "programmes", event_label: "diploma_degree" },
+    },
+    {
+      "ga-prof_accounting": { event_category: "programmes", event_label: "prof_accounting" },
+    },
+    {
+      "ga-prof_development": { event_category: "programmes", event_label: "prof_development" },
+    },
+    {
+      "ga-form_programme": { event_category: "registration", event_label: "programme" },
+    },
+    {
+      "ga-form_scholarships": { event_category: "registration", event_label: "scholarships" },
+    },
+    {
+      "ga-form_fly": { event_category: "registration", event_label: "fly" },
+    },
+    {
+      "ga-form_full_name": { event_category: "registration", event_label: "full_name" },
+    },
+    {
+      "ga-form_email": { event_category: "registration", event_label: "email" },
+    },
+    {
+      "ga-form_phone": { event_category: "registration", event_label: "phone" },
+    },
+    {
+      "gform-mckl__submit": { event_category: "registration", event_label: "submit" },
+    },
+  ];
+
+  trackElements.forEach(item => {
+    // console.log(Object.keys(item));
+    document.getElementById(Object.keys(item)).addEventListener("click", () => {
+      // console.log(item[Object.keys(item)]);
+      gtag("event", "click", item[Object.keys(item)]);
+    });
   });
-});
+
+})
 
 // testimonials
 tns({
@@ -89,12 +93,12 @@ tns({
 });
 
 // form submission
-(function($) {
+(function ($) {
   // serializeObject is not a core function of jQuery
-  $.fn.serializeObject = function() {
+  $.fn.serializeObject = function () {
     var o = {};
     var a = this.serializeArray();
-    $.each(a, function() {
+    $.each(a, function () {
       if (o[this.name]) {
         if (!o[this.name].push) {
           o[this.name] = [o[this.name]];
@@ -109,14 +113,14 @@ tns({
 
   $.validator.addMethod(
     "lettersonly",
-    function(value, element) {
+    function (value, element) {
       return this.optional(element) || /^[a-zA-Z ]+$/i.test(value);
     },
     "Letters only please"
   );
   $.validator.addMethod(
     "emailExtraCheck",
-    function(value, element) {
+    function (value, element) {
       return this.optional(element) || /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
       // return regex.test(email);
     },
@@ -181,7 +185,7 @@ tns({
        } */
   });
 
-  $form.submit(function(e) {
+  $form.submit(function (e) {
     if (!$form.valid()) {
       console.log("form not valid !!");
       return;
@@ -214,11 +218,11 @@ tns({
       dataType: "json",
       crossDomain: true,
       data: data,
-      beforeSend: function() {
+      beforeSend: function () {
         $("#gform-mckl__submit").prop("disabled", true);
         // console.log('beforesend: sending')
       },
-      success: function(xhr, status, error) {
+      success: function (xhr, status, error) {
         console.log(xhr, status, error);
 
         window.location.href = "./thank-you.html";
@@ -235,7 +239,7 @@ $('#submit-warning').remove();
 }, 12000);
 */
       },
-      error: function(xhr, status, error) {
+      error: function (xhr, status, error) {
         console.log(xhr, status, error);
         $("#gform-mckl__submit").prop("disabled", false);
       },
@@ -269,23 +273,23 @@ $('#submit-warning').remove();
 // To Section
 const navLinks = document.querySelectorAll(
   'nav ul li a'
-); 
+);
 
 Array.from(navLinks).forEach(navLink => {
   const href = navLink.getAttribute('href');
   const section = document.querySelector(href);
   const offset = 50 + 20; // nav and offset
-  
+
   navLink.onclick = e => {
     // get body position
-    const bodyRect = document.body.getBoundingClientRect().top; 
+    const bodyRect = document.body.getBoundingClientRect().top;
     // get section position relative
-    const sectionRect = section.getBoundingClientRect().top; 
+    const sectionRect = section.getBoundingClientRect().top;
     // subtract the section from body
-    const sectionPosition = sectionRect - bodyRect; 
+    const sectionPosition = sectionRect - bodyRect;
     // subtract offset
-    const offsetPosition = sectionPosition - offset; 
-    
+    const offsetPosition = sectionPosition - offset;
+
     e.preventDefault();
     window.scrollTo({
       top: offsetPosition,
@@ -299,7 +303,7 @@ Array.from(navLinks).forEach(navLink => {
 // To Top
 document.querySelector('#top').onclick = e => {
   e.preventDefault();
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
