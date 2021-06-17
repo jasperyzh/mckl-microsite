@@ -163,6 +163,9 @@ a {
     }
 }
 
+.masthead .container {
+    max-width: 1200px;
+}
 .masthead__title {
     text-shadow: 1rem 0.6rem 1.2rem #000;
     @include media-breakpoint-up(md) {
@@ -419,47 +422,4 @@ form label.error {
 .session ul.speaker li {
     list-style: outside;
     margin-left: unset;
-}
-
-// forum
-.session {
-  display: flex;
-  flex-direction: column;
-
-  @include media-breakpoint-up(sm) {
-    flex-direction: row;
-  }
-
-  .time {
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-    min-width: 25%;
-
-    @include media-breakpoint-up(sm) {
-      margin-right: 1rem;
-    }
-  }
-  .detail {
-    width: 100%;
-    h3 {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    p {
-      font-size: 0.8825rem;
-    }
-  }
-
-  ul.speaker {
-    padding-left: 1rem;
-    li {
-      list-style: none;
-
-      text-align: left;
-      font-size: 0.8rem;
-      max-width: 80%;
-      margin-left: auto;
-      font-style: italic;
-    }
-  }
 }
