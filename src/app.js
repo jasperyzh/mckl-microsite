@@ -132,7 +132,9 @@ tns({
   console.log("found form#gform-mckl", $form);
 
   // url of gsheet webapp
-  var gsheet_url = "https://script.google.com/macros/s/AKfycbzG2CYHo-hUb1otF6KIW9rRyaAHap7qo3We8tOJ2QBiYFzK38aD/exec";
+  // var gsheet_url = "https://script.google.com/macros/s/AKfycbzG2CYHo-hUb1otF6KIW9rRyaAHap7qo3We8tOJ2QBiYFzK38aD/exec";
+  var gsheet_url =
+    "https://script.google.com/macros/s/AKfycbyhquZbpcdfgVBRoyUX3AkKrByty1j2u7ZoTi7NIBo8wrVQoV4oGMud4TzfCwvU0mlNgA/exec";
 
   // jquery validation
   $form.validate({
@@ -207,6 +209,7 @@ tns({
   function get_form_data(element) {
     var data = element.serializeObject();
     data.programme_interested = data.programme_interested.toString();
+    data.sheet_name = "openday";
     return data;
   }
 
