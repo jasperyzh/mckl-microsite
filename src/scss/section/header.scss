@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.header {
+    background-color: $color-blue;
+}
+// navbar
+.nav-item {
+    margin-left: 25px;
+}
+.navbar-brand {
+    &__figure {
+        background-color: #fff;
+        margin: 0.5rem;
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+    width: 64px;
+    @include media-breakpoint-up(md) {
+        position: absolute;
+        width: 120px;
+    }
+    img {
+        width: 100%;
+    }
+}

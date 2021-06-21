@@ -1,0 +1,74 @@
+@use "./abstracts" as *;
+#site-container:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+body {
+    font-family: "PT Sans", Sans-serif;
+    font-size: 15px;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: $color-blue;
+    font-weight: 700;
+}
+.color__blue {
+    color: $color-blue;
+}
+.color__yellow {
+    color: $color-yellow;
+}
+.color__darkgrey {
+    color: $color-darkgrey;
+}
+.bg__blue {
+    background-color: $color-blue;
+    &--half {
+        background-image: linear-gradient(180deg, #ffffff 33%, $color-blue 33%);
+    }
+}
+.bg__grey {
+    background-color: $color-grey;
+}
+.bg__darkgrey {
+    background-color: $color-darkgrey;
+}
+
+a {
+    color: $color-blue;
+}
+
+.a--invert {
+    a {
+        color: #fff;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+        &:hover,
+        &:active {
+            color: $color-yellow;
+        }
+    }
+}
+
+.aspect-1x1 {
+    aspect-ratio: 1/1;
+}
+.figure {
+    &--img-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

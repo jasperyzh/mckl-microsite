@@ -1,0 +1,15 @@
+@use "./components/button";
+@use "./components/tiny-slider";
+
+@use "./section/_general";
+@use "./section/header";
+@use "./section/masthead";
+@use "./section/programme-openday";
+@use "./section/registration";
+@use "./section/footer";
+
+@use "./section/thank-you";
+
+@use "~bootstrap-select/sass/bootstrap-select";
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");

@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+// testimonials
+.testimonial {
+    &__footer {
+        text-align: right;
+    }
+    &__profilepic {
+        max-width: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
