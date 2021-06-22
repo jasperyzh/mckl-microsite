@@ -50,7 +50,8 @@ a {
     color: $color-blue;
 }
 
-.a--invert {
+.color--invert {
+    color: #fff;
     a {
         color: #fff;
         text-decoration: underline;

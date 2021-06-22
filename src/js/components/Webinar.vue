@@ -7,7 +7,7 @@
           <h2 class="text-white" style="color: #033676 !important">
             Modern Education for the Changing Times
           </h2>
-          <p>Catch this informative Registration Day Webinar now</p>
+          <p>Catch this informative Webinar now</p>
         </div>
       </head>
 
@@ -184,12 +184,12 @@ export default {
           title: "",
           desc: "Welcome Address",
           speaker: "Ms Samantha Ghouse",
-          position: "Admission & Enrolment, Executive",
+          position: "Admission & Enrolment, Programme Specialist",
         },
         {
           time: "10:35am – 11:10am",
           title: "Saving Taxes",
-          desc: "The accountancy profession is definitely changing but taxations remains at its core. Equip with the right knowledge on taxation opens the door to vast career opportunities.",
+          desc: "Taxations remains at the core of accountancy. Equip yourself with the right knowledge to explore wide career opportunities.",
           speaker: "Mr Low Chin Ann",
           position: "Course Advisor, ACCA",
         },
@@ -204,14 +204,14 @@ export default {
         {
           time: "11:50am – 12:25pm",
           title: "Future Proof with Business & Computing Studies",
-          desc: "Advance education and global industry partnerships to equip students with in - demand skills for the IR4.0 era.",
+          desc: "Advance education and global industry partnerships to equip students with in-demand skills for the IR4.0 era.",
           speaker: "Mr Yap Haw Sim",
           position: "Deputy Academic Director (Future Education)",
         },
         {
           time: "12:25pm – 1:00pm",
           title: "Up to 100% Scholarship and Tuition Fee Waiver!",
-          desc: "50% tuition fee waiver, and 100% MCKL Industry Partner Joint Scholarship when registering for a wide range of MCKL diploma programmes with other exclusive scholarships available.",
+          desc: "50% tuition fee waiver, and 100% MCKL Industry Partner Joint Scholarship when registering for a wide range of MCKL diploma programmes.",
           speaker: "Mr Colin Wong",
           position: "Scholarship Advisor, Office of the Registrar",
         },
@@ -220,7 +220,7 @@ export default {
           title: "",
           desc: "Closing Remarks",
           speaker: "Ms Samantha Ghouse",
-          position: "Admission & Enrolment, Executive",
+          position: "Admission & Enrolment, Programme Specialist",
         },
       ],
 
@@ -230,12 +230,12 @@ export default {
           title: "",
           desc: "Welcome Address",
           speaker: "Ms Samantha Ghouse",
-          position: "Admission & Enrolment, Executive",
+          position: "Admission & Enrolment, Programme Specialist",
         },
         {
           time: "10:35am – 11:10am",
           title: "A.C.E with Pre-U @ MCKL",
-          desc: "MCKL continues to be the leading choice in Pre-U programmes with proven track record, paving the way for students to Top Universities across the globe.",
+          desc: "MCKL continues to be the leading choice in Pre-U programmes, paving the way for students to Top Universities across the globe.",
           speaker: "Mr Adrian Yao",
           position:
             "Academic Director, External Programmes and Head, Teaching & Learning",
@@ -243,14 +243,14 @@ export default {
         {
           time: "11:10am – 11:45am",
           title: "Up to 100% Scholarship and Tuition Fee Waiver!",
-          desc: "50% tuition fee waiver, and 100% MCKL Industry Partner Joint Scholarship when registering for a wide range of MCKL diploma programmes with other exclusive scholarships available.",
+          desc: "50% tuition fee waiver, and 100% MCKL Industry Partner Joint Scholarship when registering for a wide range of MCKL diploma programmes.",
           speaker: "Mr Colin Wong",
           position: "Scholarship Advisor, Office of the Registrar",
         },
         {
           time: "11:45am – 12:20pm",
           title: "Rewarding Career Opportunities as a Qualified Social Worker",
-          desc: "Grab these rewarding opportunities by being a qualified social worker now with MCKL - the pioneer private provider of Social Work programme in Malaysia.",
+          desc: "Grab these rewarding opportunities by being a qualified social worker now with MCKL.",
           speaker: "Ms Jolyn Hong",
           position: "Head of Department, Diploma in Social Work",
         },
@@ -258,7 +258,7 @@ export default {
           time: "12:20pm – 12:55pm",
           title:
             "Early Childhood Education: The in-demand career for 21st century learners",
-          desc: "Early Childhood educators continue to be in-demand with emphasis on the industry from Government and parents. MCKL's proven track record and global network gives learners the edge in this profession.",
+          desc: "MCKL's proven track record and global network gives learners the edge in this profession with in-demand skills.",
           speaker: "Ms Wong Poh Swan",
           position: "Assistant, Early Childhood Education",
         },
@@ -267,24 +267,14 @@ export default {
           title: "",
           desc: "Closing Remarks",
           speaker: "Ms Samantha Ghouse",
-          position: "Admission & Enrolment, Executive",
+          position: "Admission & Enrolment, Programme Specialist",
         },
       ],
       speakers1: [
         {
-          avatar: Speaker1,
-          name: "Mr Colin Wong",
-          position: "Scholarship Advisor, Office of the Registrar",
-        },
-        {
           avatar: Speaker2,
           name: "Mr Low Chin Ann",
           position: "Course Advisor, ACCA",
-        },
-        {
-          avatar: Speaker3,
-          name: "Mr Yap Haw Sim",
-          position: "Deputy Academic Director (Future Education)",
         },
         {
           avatar: Speaker4,
@@ -297,8 +287,18 @@ export default {
           position: "MCKL ADTP Alumni",
         },
         {
+          avatar: Speaker3,
+          name: "Mr Yap Haw Sim",
+          position: "Deputy Academic Director (Future Education)",
+        },
+        {
+          avatar: Speaker1,
+          name: "Mr Colin Wong",
+          position: "Scholarship Advisor, Office of the Registrar",
+        },
+        {
           avatar: Speaker6,
-          name: "Ms Samantha Nelly Ghouse (Host)",
+          name: "Ms Samantha Ghouse",
           position: "Admission & Enrolment, Programme Specialist",
         },
       ],
@@ -326,7 +326,7 @@ export default {
         },
         {
           avatar: Speaker6,
-          name: "Ms Samantha Nelly Ghouse (Host)",
+          name: "Ms Samantha Ghouse",
           position: "Admission & Enrolment, Programme Specialist",
         },
       ],
