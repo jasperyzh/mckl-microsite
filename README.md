@@ -1,5 +1,9 @@
 # mckl-openday
 
+### 210622 revision
+[Gslides](https://drive.google.com/file/d/1dVecDPY_B3gHUbNvzRtW-76X3LB1dCoY/view)
+- Jun 22, 2021, 9:49 AM
+
 ### 210310 Feeback
 [GSlides](https://docs.google.com/presentation/d/1tnzcgNDeC72siogIGJIwve2-nBc6xJfvA29l0q6WBgk/edit#slide=id.p1)
 

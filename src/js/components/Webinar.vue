@@ -197,7 +197,7 @@ export default {
           time: "11:10am – 11:50am",
           title:
             "Holistic US Education: Advantages and Scholarship Opportunities",
-          desc: "The US remains home to the most diverse programmes with an abundance of Scholarships - Take the first step with MCKL's ADTP programme.",
+          desc: "The US remains home to the most diverse programmes with an abundance of Scholarships - Start with MCKL's ADTP programme.",
           speaker: "Bryan Leong Ji Yang & Ling Wen Hoong",
           position: "MCKL ADTP Alumni",
         },
