@@ -21,7 +21,7 @@
 
     &__bg {
         background-image: url("~img/masthead-youngwoman-mobile.jpg");
-        background-position: top left;
+        background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -48,11 +48,29 @@
         // text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
         margin: 12rem auto;
         @include media-breakpoint-up(md) {
-            margin: 8rem auto;
+            margin: 6rem auto;
         }
         @include media-breakpoint-up(lg) {
-            margin: 9rem auto;
+            margin: 7rem auto;
         }
+    }
+}
+@media (max-width: 575px) {
+    .masthead__content {
+        .h1 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.final-call {
+    display: flex;
+    align-items: center;
+    float: left;
+}
+@media (max-width: 575px) {
+    .final-call {
+        display: block;
     }
 }
 
