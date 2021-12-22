@@ -1,0 +1,208 @@
+@use "./abstracts" as *;
+
+$circle-w: 45px;
+$circle-bg: #fff;
+$arrow-bg: #55544f;
+$bezier: cubic-bezier(0.77, 0, 0.175, 1);
+$bezier-bounce: cubic-bezier(0.87, -0.41, 0.19, 1.44);
+$anim-timing: 3s;
+
+.masthead {
+    &--aspect {
+        aspect-ratio: 3 /4;
+        @include media-breakpoint-up(sm) {
+            aspect-ratio: 4/ 4;
+        }
+        @include media-breakpoint-up(md) {
+            aspect-ratio: 5/ 4;
+        }
+        @include media-breakpoint-up(lg) {
+            aspect-ratio: 16/ 9;
+        }
+        @include media-breakpoint-up(xl) {
+            aspect-ratio: 22/ 10;
+        }
+    }
+
+    &__bg {
+        background-image: url("../img/background/masthead-guy-mobile.jpg");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-up(lg) {
+            background-image: url("../img/background/masthead-guy.jpg");
+        }
+    }
+
+    &__content {
+        margin: 12rem auto;
+        @include media-breakpoint-up(md) {
+            margin: 6rem auto;
+        }
+        @include media-breakpoint-up(lg) {
+            margin: 7rem auto;
+        }
+    }
+
+    h1.title {
+        font-weight: bold;
+        font-size: 2.8rem;
+        @include media-breakpoint-up(md) {
+            font-size: 4rem;
+        }
+    }
+}
+
+.masthead__animated-icon {
+    margin: 0 auto;
+    text-align: center;
+    width: $circle-w;
+    height: $circle-w;
+    position: relative;
+    transform: translateY(-50%);
+    filter: url("#goo");
+    .circle {
+        background: $circle-bg;
+        border-radius: 50%;
+        display: inline-block;
+        height: $circle-w;
+        width: $circle-w;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transform-origin: 0%;
+        &.circle-top {
+            height: $circle-w / 3;
+            width: $circle-w / 2.4;
+            animation: blob-1-anim $anim-timing $bezier infinite;
+            z-index: 0;
+            top: 0;
+        }
+        &.circle-bottom {
+            height: $circle-w / 3;
+            width: $circle-w / 2.4;
+            animation: blob-2-anim $anim-timing $bezier infinite;
+            z-index: 9;
+            bottom: 0px;
+        }
+    }
+    .st-arrow {
+        fill: $arrow-bg;
+        animation: scrolly $anim-timing $bezier forwards infinite;
+        perspective: 9000px;
+        transform: translateZ(0);
+        transform-origin: bottom;
+    }
+}
+
+.highlights figure {
+    aspect-ratio: 1/1;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners__content {
+    justify-content: space-around;
+    figure {
+        margin: 1rem;
+    }
+    img {
+        max-width: 180px;
+    }
+}
+
+.programme {
+    .bi.bi-caret-down-fill {
+        transition: transform 0.3s ease;
+        transform: rotate(-180deg);
+    }
+    .collapsed .bi.bi-caret-down-fill {
+        transform: rotate(0deg);
+    }
+    .btn-link {
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    h3 {
+        font-size: 1.255rem;
+
+        @include media-breakpoint-up(sm) {
+            font-size: inherit;
+        }
+    }
+    .programme-box {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        h4 {
+            font-size: 1.225rem;
+        }
+        h5 {
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+        h6 {
+            font-size: 0.925rem;
+        }
+        p {
+            color: #555;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+//--- animation ---//
+@keyframes blob-1-anim {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    14% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+    24% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes blob-2-anim {
+    0% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+    30% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+    70% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+    95% {
+        transform: scale(1) translate(-50%, 26px);
+    }
+    100% {
+        transform: scale(1) translate(-50%, 10px);
+    }
+}
+
+@keyframes scrolly {
+    0% {
+        transform: translate3d(0, -150%, 0) rotateX(90deg) scale(0.5) skewX(3deg);
+    }
+    30% {
+        transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+    }
+    70% {
+        transform: translate3d(0, 0, 0) rotateX(0deg) scale(1) skewX(0deg);
+    }
+    95% {
+        transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+    }
+    100% {
+        transform: translate3d(0, 50%, 0) rotateX(-90deg) scale(0.5) skewX(-3deg);
+    }
+}

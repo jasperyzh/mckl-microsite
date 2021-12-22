@@ -1,15 +1,14 @@
-@use "./components/button";
-@use "./components/tiny-slider";
+// general
+@use "./partial/_general";
+@use "./partial/_button";
+@use "./partial/_header";
 
-@use "./section/_general";
-@use "./section/header";
-@use "./section/masthead";
-@use "./section/programme-openday";
-@use "./section/youtube";
-@use "./section/registration";
+// vue
+@use "./vue/testimonial";
+@use "./vue/LeadForm.scss";
 
-@use "./section/thank-you";
+// openday
+@use "./style-openday";
 
-@use "~bootstrap-select/sass/bootstrap-select";
-
+// import
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");

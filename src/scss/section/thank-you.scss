@@ -1,9 +1,0 @@
-@use "../abstracts" as *;
-.thank-you {
-    background-image: linear-gradient(230deg, $color-yellow 0%, #ffffff 50%);
-    h2 {
-        @include media-breakpoint-up(md) {
-            font-size: 3rem;
-        }
-    }
-}
