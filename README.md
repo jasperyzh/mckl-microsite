@@ -1,5 +1,13 @@
 # mckl-openday
 
+## dev
+parcel src\html-openday\*.html
+
+## build
+parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
+
+## log
+
 ### 210622 revision
 [Gslides](https://drive.google.com/file/d/1dVecDPY_B3gHUbNvzRtW-76X3LB1dCoY/view)
 - Jun 22, 2021, 9:49 AM

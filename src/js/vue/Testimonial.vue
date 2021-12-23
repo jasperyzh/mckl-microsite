@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-5">
           <img
-            src="../../img/testimonial-sarah.jpg"
+            src="../../img/testimonial/testimonial-sarah.jpg"
             alt="Sarah Marie Alicia Anthony"
           />
         </div>
@@ -52,7 +52,7 @@
           </blockquote>
         </div>
         <div class="col-md-5">
-          <img src="../../img/testimonial-ethanwong.jpg" alt="Ethan Wong" />
+          <img src="../../img/testimonial/testimonial-ethanwong.jpg" alt="Ethan Wong" />
         </div>
       </div>
     </article>
@@ -76,7 +76,7 @@
           </blockquote>
         </div>
         <div class="col-md-5">
-          <img src="../../img/testimonial-jia_ern.jpg" alt="Tee Jia En" />
+          <img src="../../img/testimonial/testimonial-jia_ern.jpg" alt="Tee Jia En" />
         </div>
       </div>
     </article>
@@ -102,7 +102,7 @@
         </div>
         <div class="col-md-5">
           <img
-            src="../../img/testimonial-jesselyn.jpg"
+            src="../../img/testimonial/testimonial-jesselyn.jpg"
             alt="Jesselyn Sin Jun Yi"
           />
         </div>
@@ -130,7 +130,7 @@
         </div>
         <div class="col-md-5">
           <img
-            src="../../img/testimonial-jilian.jpg"
+            src="../../img/testimonial/testimonial-jilian.jpg"
             alt="testimonial-jilian"
           />
         </div>
@@ -156,7 +156,7 @@
         </div>
         <div class="col-md-5">
           <img
-            src="../../img/testimonial-angelia.jpg"
+            src="../../img/testimonial/testimonial-angelia.jpg"
             alt="testimonial-angelia"
           />
         </div>
@@ -180,7 +180,7 @@
           </blockquote>
         </div>
         <div class="col-md-5">
-          <img src="../../img/testimonial-vija.jpg" alt="Vijiyan Ramasami" />
+          <img src="../../img/testimonial/testimonial-vija.jpg" alt="Vijiyan Ramasami" />
         </div>
       </div>
     </article>
@@ -208,7 +208,7 @@
         </div>
         <div class="col-md-5">
           <img
-            src="../../img/testimonial-denise.jpg"
+            src="../../img/testimonial/testimonial-denise.jpg"
             alt="testimonial-denise"
           />
         </div>
@@ -233,7 +233,7 @@
           </blockquote>
         </div>
         <div class="col-md-5">
-          <img src="../../img/testimonial-ranimah.jpg" alt="Ranimah Oransumg" />
+          <img src="../../img/testimonial/testimonial-ranimah.jpg" alt="Ranimah Oransumg" />
         </div>
       </div>
     </article>

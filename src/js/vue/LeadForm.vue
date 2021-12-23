@@ -27,7 +27,7 @@
           <option value="DEC">Diploma in E-Commerce - NEW</option>
           <option value="DDM">Diploma in Digital Marketing - NEW</option>
           <option value="DFTDM">
-            Diploma in Financial Technology Marketing - NEW
+            Diploma in Financial Technology - NEW
           </option>
         </optgroup>
 
