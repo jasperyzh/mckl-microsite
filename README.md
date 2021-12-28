@@ -3,8 +3,12 @@
 ## dev
 parcel src\html-openday\*.html
 
+parcel src\html-scholarship\*.html
+
 ## build
 parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
+
+parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
 
 ## log
 

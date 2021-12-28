@@ -25,37 +25,19 @@ h6,
     color: $color-blue;
     font-weight: 700;
 }
+
 .color__blue {
-    color: $color-blue;
+    color: $color-blue !important;
 }
 .color__yellow {
-    color: $color-yellow;
+    color: $color-yellow !important;
 }
 .color__darkgrey {
-    color: $color-darkgrey;
+    color: $color-darkgrey !important;
 }
-.bg__blue {
-    background-color: $color-blue;
-    &--half {
-        background-image: linear-gradient(180deg, #ffffff 33%, $color-blue 33%);
-    }
-}
-.bg__grey {
-    background-color: $color-grey;
-}
-.bg__darkgrey {
-    background-color: $color-darkgrey;
-}
-.bg__shiny {
-    background-image: linear-gradient(230deg, $color-yellow 0%, #ffffff 50%);
-}
-a {
-    color: $color-blue;
-}
-
 .color--invert {
     color: #fff;
-    a {
+    p a {
         color: #fff;
         text-decoration: underline;
         transition: color 0.3s ease;
@@ -80,6 +62,24 @@ a {
         color: #fff;
     }
 }
+.bg__blue {
+    background-color: $color-blue;
+    &--half {
+        background-image: linear-gradient(180deg, #ffffff 33%, $color-blue 33%);
+    }
+}
+.bg__grey {
+    background-color: $color-grey;
+}
+.bg__darkgrey {
+    background-color: $color-darkgrey;
+}
+.bg__shiny {
+    background-image: linear-gradient(230deg, $color-yellow 0%, #ffffff 50%);
+}
+a {
+    color: $color-blue;
+}
 
 figure.object-fit {
     width: 100%;
@@ -91,26 +91,6 @@ figure.object-fit {
     }
 }
 
-.youtube {
-    &__padding {
-        padding: 0.8rem;
-    }
-}
-.container-yt {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 56.25%;
-    box-shadow: 3px 3px 8px hsl(0deg 0% 40% / 30%);
-}
-
-.responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+.aspect--16x9 {
+    aspect-ratio: 16/9;
 }

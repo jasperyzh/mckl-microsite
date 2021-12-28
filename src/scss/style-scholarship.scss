@@ -1,0 +1,146 @@
+@use "./abstracts/" as *;
+
+// general
+@use "./partial/_general";
+@use "./partial/_button";
+@use "./partial/_header";
+@use "./partial/_sections";
+@use "./partial/_footer";
+
+// vue
+// @use "./vue/testimonial";
+// @use "./vue/LeadForm.scss";
+
+// // openday
+// @use "./style-openday";
+
+// import
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+//------ mckl-scholarship ------//
+
+.masthead {
+    padding-top: 5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        text-align: initial;
+    }
+
+    &__bg {
+        background-image: url("../img/page-scholarship/main-banner-mobile.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-up(md) {
+            background-image: url("../img/page-scholarship/main-banner.jpg");
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        @include media-breakpoint-up(md) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+    &__list-point {
+        margin-bottom: 0.5rem;
+    }
+    &__list-point:before {
+        content: "✓";
+        margin-right: 0.5rem;
+        font-weight: 600;
+    }
+
+    &__zohoform {
+        &.container-box {
+            background-color: #ffffffdb;
+            padding: 2rem 2.5rem;
+        }
+
+        .form-control {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #033676;
+            border-radius: 0;
+            color: #033676;
+        }
+        .form-control.info {
+            color: #033676;
+        }
+        .form-control.qualification option {
+            color: #495057;
+        }
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #033676;
+        }
+        .btn.dropdown-toggle.btn-light.bs-placeholder {
+            background: transparent;
+            color: #033676;
+            border: none;
+            border-bottom: 1px solid #033676;
+            border-radius: 0;
+        }
+        .dIB.zcwf_privacy_txt {
+            color: #033676;
+            font-size: 14px;
+        }
+        .btn.btn-primary.formsubmit.zcwf_button {
+            background-color: $color-yellow;
+            color: $color-blue !important;
+            border: 1px solid $color-yellow;
+        }
+    }
+}
+
+.highlights {
+    img.logo-scholarship {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: absolute;
+            right: 7rem;
+        }
+    }
+    &__icon {
+        justify-content: space-around;
+
+        figure {
+            margin: 1rem;
+            flex: 1 1 220px;
+
+            img {
+                aspect-ratio: 1/1;
+            }
+            figcaption {
+                margin: 1rem auto;
+            }
+        }
+    }
+    &__aid {
+        padding: 2rem;
+        border: 2px solid $color-yellow;
+
+        ul {
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.cta {
+    background-image: url("../img/page-scholarship/cta-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+}

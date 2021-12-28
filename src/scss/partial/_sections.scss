@@ -1,0 +1,42 @@
+// all shared sections will be style under here
+@use "../abstracts" as *;
+
+.programme {
+    .bi.bi-caret-down-fill {
+        transition: transform 0.3s ease;
+        transform: rotate(-180deg);
+    }
+    .collapsed .bi.bi-caret-down-fill {
+        transform: rotate(0deg);
+    }
+    .btn-link {
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    h3 {
+        font-size: 1.255rem;
+
+        @include media-breakpoint-up(sm) {
+            font-size: inherit;
+        }
+    }
+    .programme-box {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        h4 {
+            font-size: 1.225rem;
+        }
+        h5 {
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+        h6 {
+            font-size: 0.925rem;
+        }
+        p {
+            color: #555;
+            font-size: 0.8rem;
+        }
+    }
+}
