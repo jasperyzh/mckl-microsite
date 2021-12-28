@@ -11,6 +11,8 @@ parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day
 parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
 
 ## log
+### 211228
+- merged mckl-scholarship together with mckl-openday
 
 ### 210622 revision
 [Gslides](https://drive.google.com/file/d/1dVecDPY_B3gHUbNvzRtW-76X3LB1dCoY/view)

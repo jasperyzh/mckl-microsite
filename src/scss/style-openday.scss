@@ -1,3 +1,4 @@
+@use "./abstracts" as *;
 // general
 @use "./partial/_general";
 @use "./partial/_button";
@@ -13,7 +14,6 @@
 
 
 //------ mckl-openday ------//
-@use "./abstracts" as *;
 
 $circle-w: 45px;
 $circle-bg: #fff;

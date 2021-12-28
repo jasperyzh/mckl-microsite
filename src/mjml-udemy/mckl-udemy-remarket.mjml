@@ -1,0 +1,229 @@
+<mjml>
+  <mj-head>
+    <mj-title>New Free Online Courses For You!</mj-title>
+    <mj-attributes>
+      <mj-all padding="0px" font-family="Lato, Helvetica, Arial, sans-serif" color="#131313" line-height="1.4"></mj-all>
+
+      <mj-class name="section--blue" align="center" background-color="#003878" padding="20px 0"></mj-class>
+
+      <mj-class name="h1" align="center" font-size="34px" font-family="Lato, Helvetica, Arial, sans-serif" padding="10px 25px" color="#003878" line-height="1.2"></mj-class>
+
+      <mj-class name="h2" align="center" color="#131313" font-size="20px" font-family="Lato, Helvetica, Arial, sans-serif" padding="10px"></mj-class>
+
+      <mj-class name="h3" align="center" font-size="25px" font-family="Lato, Helvetica, Arial, sans-serif" padding="10px 25px" color="#003878"></mj-class>
+
+      <mj-class name="card-text" align="center" font-size="18px" padding="10px" height=""></mj-class>
+
+      <mj-class name="card-image" padding="0 10px"></mj-class>
+
+      <mj-class name="card-button" background-color="#fcae1d" font-size="15px" font-weight="bold" color="white" padding-bottom="20px"></mj-class>
+
+    </mj-attributes>
+    <mj-style inline="inline">
+      a {
+        color: inherit;
+      }
+
+      .blue {
+        color: #003878;
+      }
+
+      .orange {
+        color: #fcae1d;
+      }
+
+      .lightblue {
+        color: #e8f4ff;
+      }
+
+      .black {
+        color: #131313;
+      }
+    </mj-style>
+    <mj-style>
+      @media (min-width:480px) {
+        .equal-height {
+          height: 110px !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#fafafa">
+
+    <mj-section background-color="#fcae1d" padding="10px 0">
+      <mj-column>
+
+        <mj-text align="center" color="#131313" font-size="12px">
+          <a href="https://mckl.edu.my/edm/mckl-udemy-remarket/" target="_blank">​​​View this email in your browser</a>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <!-- header -->
+    <mj-section mj-class="section--blue">
+      <mj-column width="100%">
+        <mj-image src="https://mckl.edu.my/edm/mckl-logo.png" alt="mckl-logo" width="260px"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#e8f4ff" padding="30px 10px 0 10px">
+      <mj-column>
+        <mj-text mj-class="h1"><strong>New Free Online Courses For You</strong></mj-text>
+
+        <mj-text mj-class="h2">More new and exciting courses are coming to enrich your learning experience and journey.</mj-text>
+
+        <mj-spacer height="20px" />
+
+        <mj-text mj-class="h2">Discover the new courses now</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-hero mode="fixed-height" background-height="120px" height="120px" vertical-align="middle" background-url="https://mckl.edu.my/edm/bg3.jpg">
+      <mj-image align="center" width="48px" src="https://mckl.edu.my/edm/button-down2.png" alt="Icon Down" />
+    </mj-hero>
+
+    <!-- intro -->
+    <mj-section background-color="#ffffff" padding-top="30px">
+      <mj-column width="100%">
+        <mj-text mj-class="h3"><strong>New Free Online Courses<strong></mj-text>
+        <mj-text align="center" color="#131313" font-size="18px" font-family="Lato, Helvetica, Arial, sans-serif" padding="10px 30px">
+          <strong>Be the first batch to enrol and experience the latest courses this November.</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- section1 -->
+    <mj-section background-color="#ffffff" padding-top="30px">
+      <mj-column>
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-6.jpg" alt="London"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>Easy Website Design with Google Sites</strong>
+          <br />
+          <p style="font-size:15px"> Dr Gerard Boey</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/easy-website-design-with-google-sites/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+
+      <mj-column>
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-1.jpg" alt="New York"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>Embracing Autism</strong>
+          <br />
+          <p style="font-size:15px"> Ms Wong Poh Swan</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/embracing-autism/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+
+    </mj-section>
+
+    <!-- section2 -->
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-1a.jpg" alt="London"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>Information Literacy and Online Search Strategies</strong>
+          <br />
+          <p style="font-size:15px"> Ms Lydia Ong</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/information-literacy-online-search-strategies/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+      <mj-column>
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-2a.jpg" alt="London"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>Introduction to Psychology for Social Workers</strong>
+          <br />
+          <p style="font-size:15px"> Ms Jolyn Hong</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/introduction-to-psychology-for-social-workers/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+
+    </mj-section>
+
+    <!-- section3 -->
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-3.jpg" alt="London"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>Learning Skills for Lifelong Learning</strong>
+          <br />
+          <p style="font-size:15px"> Dr Gerard Boey</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/learning-skills-for-lifelong-learning/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+      <mj-column>
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-4.jpg" alt="New York"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>Successful Entry to Top Universities in the World</strong>
+          <br />
+          <p style="font-size:15px"> Mr Joshua Johnson</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/successful-entry-to-top-universities-in-the-world/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+
+    </mj-section>
+    <mj-section background-color="#ffffff" padding-bottom="30px">
+      <mj-column width="300px">
+        <mj-image mj-class="card-image" src="https://mckl.edu.my/edm/course-5.jpg" alt="London"></mj-image>
+        <mj-text mj-class="card-text" css-class="equal-height">
+          <strong>The Game of Life</strong>
+          <br />
+          <p style="font-size:15px"> Mr Eddryll Teo</p>
+        </mj-text>
+        <mj-button mj-class="card-button" href="https://www.udemy.com/course/the-game-of-life/" target="_blank">
+          Enrol Now
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="30px 0">
+      <mj-column>
+
+        <mj-text align="center" color="#131313" font-size="15px">If you need help with anything, please write to <a href="mailto:admission@mckl.edu.my" target="_blank">admission@mckl.edu.my</a></mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section mj-class="section--blue">
+      <mj-column>
+        <mj-image src="https://mckl.edu.my/edm/mckl-logo.png" alt="mckl-logo" width="200px" href="https://mckl.edu.my/" target="_blank"></mj-image>
+
+        <mj-spacer height="10px" />
+
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal">
+          <mj-social-element name="facebook" padding="10px" background-color="#003878" href="https://www.facebook.com/MethodistCollegeKL/" target="_blank">
+          </mj-social-element>
+          <mj-social-element name="youtube" padding="10px" background-color="#003878" href="https://www.youtube.com/channel/UCnICekQMcPBPo24KylfP1AQ/featured" target="_blank">
+          </mj-social-element>
+          <mj-social-element name="instagram" padding="10px" background-color="#003878" href="https://www.instagram.com/methodistcollegekl/" target="_blank">
+          </mj-social-element>
+          <mj-social-element name="linkedin" padding="10px" background-color="#003878" href="https://www.linkedin.com/school/methodist-college-kuala-lumpur/" target="_blank">
+          </mj-social-element>
+        </mj-social>
+
+
+        <mj-spacer height="10px" />
+
+        <mj-text align="center" color="#ffffff" font-size="11px">COPYRIGHT © 2021 MCKL ALL RIGHTS RESERVED | <a href="https://mckl.edu.my/personal-data-protection-notice/" target="_blank">PDPA</a> | REG.NO: DK144(W)</mj-text>
+
+        <mj-spacer height="20px" />
+
+        <mj-text align="center" color="#ffffff" font-size="11px">Click here to unsubscribe from the newsletters.</mj-text>
+
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
