@@ -1,14 +1,26 @@
-# mckl-openday
+# mckl-microsites
 
 ## dev
 parcel src\html-openday\*.html
 
 parcel src\html-scholarship\*.html
 
+parcel src\html-acca\*.html
+
+parcel src\html-digital\*.html
+
+parcel src\html-social\*.html
+
 ## build
 parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
 
 parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
+
+parcel build src\html-acca\*.html --public-url="./" --out-dir="build/acca"
+
+parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital"
+
+parcel build src\html-social\*.html --public-url="./" --out-dir="build/social"
 
 ## log
 ### 211228
