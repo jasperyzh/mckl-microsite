@@ -1,0 +1,16 @@
+@use "./abstracts/" as *;
+
+// general
+@use "./partial/_general";
+@use "./partial/_button";
+@use "./partial/_header";
+@use "./partial/_sections";
+@use "./partial/_footer";
+/* 
+@use "~tiny-slider/src/tiny-slider";
+@use "~bootstrap-select/sass/bootstrap-select"; */
+
+// import
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+//------ mckl-udemy ------//
