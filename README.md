@@ -11,6 +11,8 @@ parcel src\html-digital\*.html
 
 parcel src\html-social\*.html
 
+parcel src\html-udemy\*.html
+
 ## build
 parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
 
@@ -22,7 +24,13 @@ parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital"
 
 parcel build src\html-social\*.html --public-url="./" --out-dir="build/social"
 
+parcel build src\html-udemy\*.html --public-url="./" --out-dir="build/udemy"
+
 ## log
+
+### 211229
+- merged mckl-acca/digital/social/udemy into project; all hardcoded and still yet to dissect into template
+
 ### 211228
 - merged mckl-scholarship together with mckl-openday
 
