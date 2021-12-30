@@ -1,6 +1,9 @@
 # mckl-microsites
 
 ## dev
+
+parcel src/**/*.html
+
 parcel src\html-acca\*.html
 parcel src\html-digital\*.html
 parcel src\html-openday\*.html
@@ -23,6 +26,14 @@ https://staging.fishermen-analytics.com/mckl/open-day/
 https://staging.fishermen-analytics.com/mckl/scholarship/
 https://staging.fishermen-analytics.com/mckl/short-courses/
 https://staging.fishermen-analytics.com/mckl/social-work/
+
+## live_url
+https://mckl.edu.my/acca/
+https://mckl.edu.my/digital-programme
+https://mckl.edu.my/open-day/
+https://mckl.edu.my/scholarship/
+https://mckl.edu.my/short-courses/
+https://mckl.edu.my/social-work/
 
 ## log
 

@@ -1,5 +1,5 @@
 <template>
-  <form id="gform-mckl" class="col" method="POST" action="./thank-you">
+  <form id="gform-mckl" class="col" method="POST" action="./thank-you.html">
     <div id="ga-form_programme" class="form-group">
       <label for="programme_interested"
         >I am interested in <span class="text-danger">*</span></label
