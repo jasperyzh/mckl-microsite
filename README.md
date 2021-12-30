@@ -1,32 +1,33 @@
 # mckl-microsites
 
 ## dev
-parcel src\html-openday\*.html
-
-parcel src\html-scholarship\*.html
-
 parcel src\html-acca\*.html
-
 parcel src\html-digital\*.html
-
+parcel src\html-openday\*.html
+parcel src\html-scholarship\*.html
+parcel src\html-udemy\*.html
 parcel src\html-social\*.html
 
-parcel src\html-udemy\*.html
-
 ## build
-parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
-
-parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
-
 parcel build src\html-acca\*.html --public-url="./" --out-dir="build/acca"
+parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital-programme"
+parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
+parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
+parcel build src\html-udemy\*.html --public-url="./" --out-dir="build/short-courses"
+parcel build src\html-social\*.html --public-url="./" --out-dir="build/social-work"
 
-parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital"
-
-parcel build src\html-social\*.html --public-url="./" --out-dir="build/social"
-
-parcel build src\html-udemy\*.html --public-url="./" --out-dir="build/udemy"
+## staging_url
+https://staging.fishermen-analytics.com/mckl/acca/
+https://staging.fishermen-analytics.com/mckl/digital-programme/
+https://staging.fishermen-analytics.com/mckl/open-day/
+https://staging.fishermen-analytics.com/mckl/scholarship/
+https://staging.fishermen-analytics.com/mckl/short-courses/
+https://staging.fishermen-analytics.com/mckl/social-work/
 
 ## log
+
+### 211230
+- build all microsites and determined the URL for staging
 
 ### 211229
 - merged mckl-acca/digital/social/udemy into project; all hardcoded and still yet to dissect into template
