@@ -22,8 +22,9 @@ import LeadForm from './vue/LeadForm';
 // // June 2021 - itinerary for webinar
 // // import Webinar from './components/Webinar';
 
-new Vue({ render: createElement => createElement(LeadForm) }).$mount('#leadform-vue');
-// new Vue({ render: createElement => createElement(Testimonial) }).$mount('#testimonial-vue');
+window.SHEET_NAME = "acca";
+let lead_form = new Vue({ render: createElement => createElement(LeadForm) }).$mount('#leadform-vue');
+
 
 import { tns } from "tiny-slider/src/tiny-slider";
 

@@ -1,5 +1,6 @@
 <template>
-  <form id="gform-mckl" class="col" method="POST" action="./thank-you.html">
+  <form id="gform-mckl" class="col" method="POST">
+    <pre>220117</pre>
     <div id="ga-form_programme" class="form-group">
       <label for="programme_interested"
         >I am interested in <span class="text-danger">*</span></label
@@ -26,9 +27,7 @@
           <option value="DIT">Diploma in Information Technology - NEW</option>
           <option value="DEC">Diploma in E-Commerce - NEW</option>
           <option value="DDM">Diploma in Digital Marketing - NEW</option>
-          <option value="DFTDM">
-            Diploma in Financial Technology - NEW
-          </option>
+          <option value="DFTDM">Diploma in Financial Technology - NEW</option>
         </optgroup>
 
         <optgroup label="Professional Accounting">
@@ -143,6 +142,7 @@
           type="checkbox"
           value=""
           id="invalidCheck"
+          name="agreement"
           required
         />
         <label class="form-check-label" for="invalidCheck">
@@ -169,10 +169,36 @@
   </form>
 </template>
 <script>
+import "jquery-validation";
+
 export default {
   mounted() {
     // form submission
     (function ($) {
+      const DEBUG = false;
+      if (DEBUG) {
+        $('[name="programme_interested"]').val("CAL");
+        $('[name="check_counselling"]').prop("checked", true);
+        $('[name="check_scholarship"]').prop("checked", true);
+        $('[name="full_name"]').val(`test fishermen ${window.SHEET_NAME}`);
+        $('[name="email"]').val("test@email.com");
+        $('[name="mobile_phone"]').val("0132221111");
+        $('[name="agreement"]').prop("checked", true);
+        /*         let formItems = {
+          fullname: $("#fullname").val(),
+          dob: $("#dob").val(),
+          age: $("#age").val(),
+          height: $("#height").val(),
+          weight: $("#weight").val(),
+          chest: $("#chest").val(),
+          hip: $("#hip").val(),
+          email: $("#email").val(),
+          phone: $("#phone").val(),
+          phone: $("#address").val(),
+        };
+        console.log(formItems); */
+      }
+
       // serializeObject is not a core function of jQuery
       $.fn.serializeObject = function () {
         var o = {};
@@ -263,10 +289,14 @@ export default {
         },
         // debug: true,
 
-        /*  submitHandler: function (form) {
-           $("#gform-mckl__submit").prop('disabled', true);
-           // form.submit();
-       } */
+        // submitHandler: function (form) {
+        //   form.preventDefault();
+        //   console.log("test submit");
+        //   //  $("#gform-mckl__submit").prop('disabled', true);
+
+        //   return false;
+        //   // form.submit();
+        // },
       });
 
       $form.submit(function (e) {
@@ -292,7 +322,9 @@ export default {
         var data = element.serializeObject();
         data.programme_interested = data.programme_interested.toString();
         // gsheet - https://docs.google.com/spreadsheets/d/1RTfHGUgFTJ1ut3GAfeNXCTP3o6nNXFF_ITNACk4qH4M/edit#gid=0
-        data.sheet_name = "openday";
+        // data.sheet_name = "openday";
+        data.sheet_name = window.SHEET_NAME ? window.SHEET_NAME : "openday";
+
         console.log(data);
         return data;
       }
@@ -332,6 +364,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

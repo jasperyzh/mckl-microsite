@@ -11,6 +11,14 @@ parcel src\html-scholarship\*.html
 parcel src\html-udemy\*.html
 parcel src\html-social\*.html
 
+
+http://localhost:1234/html-acca/index.html
+http://localhost:1234/html-digital/index.html
+http://localhost:1234/html-openday/index.html
+http://localhost:1234/html-scholarship/index.html
+http://localhost:1234/html-udemy/index.html
+http://localhost:1234/html-social/index.html
+
 ## build
 parcel build src\html-acca\*.html --public-url="./" --out-dir="build/acca"
 parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital-programme"
