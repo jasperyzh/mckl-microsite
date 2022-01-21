@@ -1,6 +1,5 @@
 <template>
   <form id="gform-mckl" class="col" method="POST">
-    <pre>220117</pre>
     <div id="ga-form_programme" class="form-group">
       <label for="programme_interested"
         >I am interested in <span class="text-danger">*</span></label
@@ -14,58 +13,19 @@
       >
         <option disabled="">- Please select your preferences -</option>
 
-        <optgroup label="Pre-U / Foundation">
-          <option value="CAL">Cambridge A Level</option>
-          <option value="AUSMAT">Australian Matriculation</option>
-        </optgroup>
-
-        <optgroup label="Diploma &amp; Degree">
-          <option value="ADTP">American Degree Transfer Program</option>
-          <option value="DECE">Diploma in Early Childhood Education</option>
-          <option value="DSW">Diploma in Social Work - NEW</option>
-          <option value="DCS">Diploma in Computer Science - NEW</option>
-          <option value="DIT">Diploma in Information Technology - NEW</option>
-          <option value="DEC">Diploma in E-Commerce - NEW</option>
-          <option value="DDM">Diploma in Digital Marketing - NEW</option>
-          <option value="DFTDM">Diploma in Financial Technology - NEW</option>
-        </optgroup>
-
-        <optgroup label="Professional Accounting">
-          <option value="ACCAFIA">ACCA Foundation in Accountancy</option>
-          <option value="ACCA">
-            Association of Chartered Certified Accountants
+        <optgroup
+          :label="group_id"
+          v-for="(group, group_id) in programme_interested"
+          :key="group_id"
+        >
+          <option
+            :value="prog_value"
+            v-for="(prog, prog_value) in group"
+            :key="prog_value"
+          >
+            {{ prog }}
           </option>
         </optgroup>
-
-        <optgroup label="Professional Development">
-          <option value="CICTL">
-            Cambridge International Certificate in Teaching &amp; Learning
-          </option>
-          <option value="CIDTL">
-            Cambridge International Diploma in Teaching &amp; Learning
-          </option>
-          <option value="ICD">
-            International Certification of Digital Literacy
-          </option>
-          <option value="MCECE">
-            Micro-Credentials in Early Childhood Education
-          </option>
-          <option value="MCSW">Micro-Credentials in Social Work</option>
-          <option value="MCCS">Micro-credentials in Computer Science</option>
-          <option value="MCIT">
-            Micro-credentials in Information Technology
-          </option>
-          <option value="MCEC">Micro-credentials in E-Commerce</option>
-          <option value="MCDM">Micro-credentials in Digital Marketing</option>
-          <option value="EMLPE">
-            Educational Management and Leadership for Private Education
-          </option>
-          <option value="TLERSCW">
-            Teaching &amp; Learning and Education Related Short Courses &amp;
-            Workshop
-          </option>
-        </optgroup>
-
         <option value="none">Not Sure</option>
       </select>
     </div>
@@ -170,8 +130,14 @@
 </template>
 <script>
 import "jquery-validation";
+import "bootstrap-select";
 
 export default {
+  created() {
+    if (window.PROGRAMME_INTERESTED) {
+      this.programme_interested = window.PROGRAMME_INTERESTED;
+    }
+  },
   mounted() {
     // form submission
     (function ($) {
@@ -360,7 +326,43 @@ export default {
     })(jQuery);
   },
   data() {
-    return {};
+    return {
+      programme_interested: {
+        "Pre-U / Foundation": {
+          CAL: "Cambridge A Level",
+          AUSMAT: "Australian Matriculation",
+        },
+        "Diploma & Degree": {
+          ADTP: "American Degree Transfer Program",
+          DECE: "Diploma in Early Childhood Education",
+          DSW: "Diploma in Social Work - NEW",
+          DCS: "Diploma in Computer Science - NEW",
+          DIT: "Diploma in Information Technology - NEW",
+          DEC: "Diploma in E-Commerce - NEW",
+          DDM: "Diploma in Digital Marketing - NEW",
+          DFTDM: "Diploma in Financial Technology - NEW",
+        },
+        "Professional Accounting": {
+          ACCAFIA: "ACCA Foundation in Accountancy",
+          ACCA: "Association of Chartered Certified Accountants",
+        },
+        "Professional Development": {
+          CICTL:
+            "Cambridge International Certificate in Teaching &amp; Learning",
+          CIDTL: "Cambridge International Diploma in Teaching &amp; Learning",
+          ICD: "International Certification of Digital Literacy",
+          MCECE: "Micro-Credentials in Early Childhood Education",
+          MCSW: "Micro-Credentials in Social Work",
+          MCCS: "Micro-credentials in Computer Science",
+          MCIT: "Micro-credentials in Information Technology",
+          MCEC: "Micro-credentials in E-Commerce",
+          MCDM: "Micro-credentials in Digital Marketing",
+          EMLPE: "Educational Management and Leadership for Private Education",
+          TLERSCW:
+            "Teaching &amp; Learning and Education Related Short Courses &amp; Workshop",
+        },
+      },
+    };
   },
 };
 </script>
