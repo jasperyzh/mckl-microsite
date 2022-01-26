@@ -21,4 +21,5 @@ import Testimonial from './vue/Testimonial';
 new Vue({ render: createElement => createElement(Testimonial) }).$mount('#testimonial-vue');
 
 window.SHEET_NAME = "openday";
+
 new Vue({ render: createElement => createElement(LeadForm) }).$mount('#leadform-vue');

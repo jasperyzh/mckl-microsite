@@ -36,7 +36,7 @@ window.PROGRAMME_INTERESTED = {
         DIT: "Diploma in Information Technology - NEW",
         DEC: "Diploma in E-Commerce - NEW",
         DDM: "Diploma in Digital Marketing - NEW",
-        DFTDM: "Diploma in Financial Technology - NEW",
+        DFT: "Diploma in Financial Technology - NEW",
     },
     /* "Professional Accounting": {
         ACCAFIA: "ACCA Foundation in Accountancy",
