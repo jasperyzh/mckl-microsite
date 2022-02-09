@@ -1,5 +1,7 @@
 # mckl-microsites
 
+this is a new branch - scholarship-merge
+
 ## dev
 
 parcel src/**/*.html
