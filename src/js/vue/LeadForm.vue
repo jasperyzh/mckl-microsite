@@ -15,7 +15,7 @@
 
         <optgroup
           :label="group_id"
-          v-for="(group, group_id) in programme_interested"
+          v-for="(group, group_id) in get_programme_interested"
           :key="group_id"
         >
           <option
@@ -139,9 +139,15 @@ export default {
     }
   },
   mounted() {
+    const DEBUG = true;
+
+    const GSHEET_URL =
+      "https://script.google.com/macros/s/AKfycbyhquZbpcdfgVBRoyUX3AkKrByty1j2u7ZoTi7NIBo8wrVQoV4oGMud4TzfCwvU0mlNgA/exec";
+    const GSHEET_NAME = window.SHEET_NAME ? window.SHEET_NAME : "openday";
+
     // form submission
     (function ($) {
-      const DEBUG = false;
+      // debugs
       if (DEBUG) {
         $('[name="programme_interested"]').val("CAL");
         $('[name="check_counselling"]').prop("checked", true);
@@ -150,19 +156,6 @@ export default {
         $('[name="email"]').val("test@email.com");
         $('[name="mobile_phone"]').val("0132221111");
         $('[name="agreement"]').prop("checked", true);
-        /*         let formItems = {
-          fullname: $("#fullname").val(),
-          dob: $("#dob").val(),
-          age: $("#age").val(),
-          height: $("#height").val(),
-          weight: $("#weight").val(),
-          chest: $("#chest").val(),
-          hip: $("#hip").val(),
-          email: $("#email").val(),
-          phone: $("#phone").val(),
-          phone: $("#address").val(),
-        };
-        console.log(formItems); */
       }
 
       // serializeObject is not a core function of jQuery
@@ -189,6 +182,7 @@ export default {
         },
         "Letters only please"
       );
+
       $.validator.addMethod(
         "emailExtraCheck",
         function (value, element) {
@@ -203,15 +197,17 @@ export default {
         "Please enter a valid email address"
       );
 
-      // form selector
+      // selector & setup
       var $form = $("form#gform-mckl");
 
-      // url of gsheet webapp
-      var gsheet_url =
-        "https://script.google.com/macros/s/AKfycbyhquZbpcdfgVBRoyUX3AkKrByty1j2u7ZoTi7NIBo8wrVQoV4oGMud4TzfCwvU0mlNgA/exec";
+      // bootstrap-picker
+      $(".programme-picker").selectpicker({
+        noneSelectedText: "Please choose your programmes",
+      });
 
       // jquery validation
       $form.validate({
+        debug: DEBUG,
         rules: {
           full_name: {
             required: true,
@@ -253,115 +249,108 @@ export default {
             required: "Please select your preference",
           },
         },
-        // debug: true,
-
-        // submitHandler: function (form) {
-        //   form.preventDefault();
-        //   console.log("test submit");
-        //   //  $("#gform-mckl__submit").prop('disabled', true);
-
-        //   return false;
-        //   // form.submit();
-        // },
       });
 
-      $form.submit(function (e) {
-        if (!$form.valid()) {
-          console.log("form not valid !!");
+      $form.submit(async function (e) {
+        /* if (!$form.valid()) {
+          console.log("-form not valid-");
           return;
-        }
-        // check valid
+        } */
+
+        // disable button
+        $("#gform-mckl__submit").prop("disabled", true);
 
         // get sanitized formdata
-        let formdata = get_form_data($form);
-        console.log(formdata);
+        let formdata = prep_form_data($form, {
+          sheet_name: GSHEET_NAME,
+        });
 
         // submit form
-        form_submit_to_google_sheet(formdata, gsheet_url);
+        let submit_status = await form_submit_gsheet(GSHEET_URL, formdata);
 
-        // go to thank you page
+        if (submit_status.response.result == "success") {
+          if (!DEBUG) window.location.href = "./thank-you.html";
+
+          if (DEBUG) console.log("result", submit_status);
+        } else {
+          console.log("error with submission", submit_status);
+        }
+
+        /* 
+        # formdata
+        
+        agreement: "";
+        check_counselling: "1";
+        check_scholarship: "1";
+        email: "test@email.com";
+        full_name: "test fishermen openday";
+        mobile_phone: "0132221111";
+        programme_interested: "CAL";
+        sheet_name: "openday";
+        */
+
+        /* 
+        # ZOHO_LEADS
+        ## info
+        Last Name
+        Email
+        Mobile
+        State/Negeri
+        Campus
+        Lead Source: Microsite (MCKL Website)
+
+        ## Programme Interested
+        Pre-University 
+        Diploma/Degree
+        Professional Accounting Programme
+        Professional Development Programme
+
+        ## Remarks
+        Intake
+        Type of Scholarship
+        Remarks
+       */
+
+        // enable submit button
+        $("#gform-mckl__submit").prop("disabled", true);
+
         return false;
       });
 
-      // func - get sanitized formdata
-      function get_form_data(element) {
-        var data = element.serializeObject();
+      function prep_form_data(element, additional_data) {
+        let data = element.serializeObject();
+
+        // convert programme_interested tostring
         data.programme_interested = data.programme_interested.toString();
-        // gsheet - https://docs.google.com/spreadsheets/d/1RTfHGUgFTJ1ut3GAfeNXCTP3o6nNXFF_ITNACk4qH4M/edit#gid=0
-        // data.sheet_name = "openday";
-        data.sheet_name = window.SHEET_NAME ? window.SHEET_NAME : "openday";
 
-        console.log(data);
-        return data;
+        return { ...data, ...additional_data };
       }
 
-      // func - ajax for form submission
-      function form_submit_to_google_sheet(data, url) {
-        $.ajax({
-          url: url,
-          method: "GET",
-          dataType: "json",
-          crossDomain: true,
-          data: data,
-          beforeSend: function () {
-            $("#gform-mckl__submit").prop("disabled", true);
-            // console.log('beforesend: sending')
-          },
-          success: function (xhr, status, error) {
-            console.log(xhr, status, error);
-
-            window.location.href = "./thank-you.html";
-          },
-          error: function (xhr, status, error) {
-            console.log(xhr, status, error);
-            $("#gform-mckl__submit").prop("disabled", false);
-          },
-        });
+      async function form_submit_gsheet(url, params) {
+        try {
+          const response = await $.ajax({
+            url: url,
+            // type: "POST",
+            dataType: "json",
+            data: params,
+            method: "GET",
+            crossDomain: true,
+          });
+          return { response, params };
+        } catch (error) {
+          return error;
+        }
       }
-
-      // bootstrap-picker
-      $(".programme-picker").selectpicker({
-        noneSelectedText: "Please choose your programmes",
-      });
     })(jQuery);
+  },
+  computed: {
+    get_programme_interested() {
+      return this.programme_interested;
+    },
   },
   data() {
     return {
-      programme_interested: {
-        "Pre-U / Foundation": {
-          CAL: "Cambridge A Level",
-          AUSMAT: "Australian Matriculation",
-        },
-        "Diploma & Degree": {
-          ADTP: "American Degree Transfer Program",
-          DECE: "Diploma in Early Childhood Education",
-          DSW: "Diploma in Social Work - NEW",
-          DCS: "Diploma in Computer Science - NEW",
-          DIT: "Diploma in Information Technology - NEW",
-          DEC: "Diploma in E-Commerce - NEW",
-          DDM: "Diploma in Digital Marketing - NEW",
-          DFT: "Diploma in Financial Technology - NEW",
-        },
-        "Professional Accounting": {
-          ACCAFIA: "ACCA Foundation in Accountancy",
-          ACCA: "Association of Chartered Certified Accountants",
-        },
-        "Professional Development": {
-          CICTL:
-            "Cambridge International Certificate in Teaching &amp; Learning",
-          CIDTL: "Cambridge International Diploma in Teaching &amp; Learning",
-          ICD: "International Certification of Digital Literacy",
-          MCECE: "Micro-Credentials in Early Childhood Education",
-          MCSW: "Micro-Credentials in Social Work",
-          MCCS: "Micro-credentials in Computer Science",
-          MCIT: "Micro-credentials in Information Technology",
-          MCEC: "Micro-credentials in E-Commerce",
-          MCDM: "Micro-credentials in Digital Marketing",
-          EMLPE: "Educational Management and Leadership for Private Education",
-          TLERSCW:
-            "Teaching &amp; Learning and Education Related Short Courses &amp; Workshop",
-        },
-      },
+      programme_interested: {},
     };
   },
 };

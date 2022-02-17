@@ -1,7 +1,11 @@
 # mckl-microsites
 
-## dev
+Currently using *ParcelV1*
 
+[leadform](https://docs.google.com/spreadsheets/d/1RTfHGUgFTJ1ut3GAfeNXCTP3o6nNXFF_ITNACk4qH4M/edit#gid=0)
+
+## dev
+```
 parcel src/**/*.html
 
 parcel src\html-acca\*.html
@@ -10,7 +14,7 @@ parcel src\html-openday\*.html
 parcel src\html-scholarship\*.html
 parcel src\html-udemy\*.html
 parcel src\html-social\*.html
-
+```
 
 http://localhost:1234/html-acca/index.html
 http://localhost:1234/html-digital/index.html
@@ -20,12 +24,15 @@ http://localhost:1234/html-udemy/index.html
 http://localhost:1234/html-social/index.html
 
 ## build
+
+```
 parcel build src\html-acca\*.html --public-url="./" --out-dir="build/acca"
 parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital-programme"
 parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
 parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
 parcel build src\html-udemy\*.html --public-url="./" --out-dir="build/short-courses"
 parcel build src\html-social\*.html --public-url="./" --out-dir="build/social-work"
+```
 
 ## staging_url
 https://staging.fishermen-analytics.com/mckl/acca/
