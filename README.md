@@ -1,6 +1,9 @@
 # mckl-microsites
 
+```
 Currently using *ParcelV1*
+- .vue <style> have issue; move all styling for .vue to /scss/vue/*.scss
+```
 
 [leadform](https://docs.google.com/spreadsheets/d/1RTfHGUgFTJ1ut3GAfeNXCTP3o6nNXFF_ITNACk4qH4M/edit#gid=0)
 

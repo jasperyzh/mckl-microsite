@@ -2,50 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <include src="html/head-default.html"></include>
+
     <title>Scholarship Day | Methodist College Kuala Lumpur</title>
     <meta name="description"
         content="Join our upcoming Scholarship Day for rebates, enrollment offers, scholarships and financial aid. Personalised counselling available!">
 
-    <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../scss/style.scss">
+    <style>
+        .masthead__bg {
+            background: url("../img/page-scholarship/main-banner2-mobile.jpg") no-repeat center;
+            background-size: cover;
+        }
 
-    <!-- thank-you.html -->
-    <meta name="robots" content="noindex">
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WKV6R6J');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <link rel="stylesheet" href="../scss/style-scholarship.scss">
-
+        @media (min-width: 1024px) {
+            .masthead__bg {
+                background-image: url("../img/page-scholarship/main-banner2.jpg");
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKV6R6J" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <div id="site-container">
-
 
         <header class="header bg__blue fixed-top shadow">
             <div class="container">
                 <nav
                     class="navbar navbar-expand-md navbar-dark justify-content-between align-items-center align-items-md-start p-0">
                     <div class="navbar-logo">
-                        <a class="navbar-logo__href" href="https://www.mckl.edu.my/open-day/">
+                        <a class="navbar-logo__href" href="/scholarship">
                             <figure class="navbar-logo__figure">
                                 <img class="navbar-logo__img" src="../img/mckl-logo-portrait.png" alt="MCKL Logo">
                             </figure>
@@ -82,29 +69,35 @@
 
         <main class="main">
 
-            <!-- thank-you.html -->
-            <section id="thank-you" class="bg__shiny py-5 text-center">
+            <!-- thank-you -->
+            <section id="thank-you" class="d-none bg__shiny py-5 text-center">
                 <h2 class="h1 my-5 py-5 px-2">Thank you for your submission!</h2>
             </section>
 
-            <section id="masthead" class="masthead masthead__bg pb-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7 my-4">
-                            <h1 class="masthead__title">MCKL Scholarships</h1>
-                            <p class="h4 font-weight-normal pt-2">Wide Range of Scholarship and Financial Aid for You
-                            </p>
-                            <p class="masthead__desc">We are open for counselling. Book your appointment now!</p>
-                            <ul class="masthead__list text-left pl-5 ml-5 ml-md-0">
-                                <li class="masthead__list-point">100% Fully Vaccinated</li>
-                                <li class="masthead__list-point">Full Compliance to Safety Measures</li>
-                                <li class="masthead__list-point">On-campus Personalised Counselling Available
-                                </li>
-                            </ul>
-                            <button class="btn btn__cta" style="pointer-events: none;">January Intake
-                                in Progress</button>
+            <!-- masthead -->
+            <section id="masthead" class="masthead masthead__bg py-5">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="mt-5">
+                                <h1 class="display-4 font-weight-bold">MCKL Scholarships
+                                </h1>
+                                <p class="h4 font-weight-normal mb-4">Wide Range of Scholarship and Financial Aid for
+                                    You
+                                </p>
+                                <p>We are open for counselling. Book your appointment now!</p>
+                                <ul class="text-left pl-5 ml-5 ml-md-0">
+                                    <li class="point">100% Fully Vaccinated</li>
+                                    <li class="point">Full Compliance to Safety Measures</li>
+                                    <li class="point">On-campus Personalised Counselling Available
+                                    </li>
+                                </ul>
+                                <div class="btn btn-primary btn-lg btn-primary--yellow my-3"
+                                    style="pointer-events: none;">
+                                    APRIL & MAY INTAKE IN PROGRESS</div>
+                            </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-lg-5 mt-5 p-4" style="background: rgba(255,255,255,0.9);">
 
                             <!-- zoho-webform-scholarship -->
                             <include src="html/zoho-webform-scholarship.html" locals='{
@@ -113,6 +106,12 @@
 
                         </div>
                     </div>
+                </div>
+
+                <!-- <div class="masthead__scrollmore">
+                    <include src="html/icon-masthead-scrollmore.html"></include>
+                </div> -->
+
             </section>
 
 
@@ -132,31 +131,31 @@
                         </div>
                     </div>
                     <div class="row highlights__icon text-center">
-                        <figure>
-                            <img width="120" src="../img/page-scholarship/icon1-counselling.png"
+                        <figure class="col">
+                            <img class="img-square" width="120" src="../img/page-scholarship/icon1-counselling.png"
                                 alt="Personalised Counselling">
-                            <figcaption>
+                            <figcaption class="mt-4">
                                 <h5>Personalised Counselling</h5>
                             </figcaption>
                         </figure>
-                        <figure>
-                            <img width="120" src="../img/page-scholarship/icon2-scholarship.png"
+                        <figure class="col">
+                            <img class="img-square" width="120" src="../img/page-scholarship/icon2-scholarship.png"
                                 alt="Scholarships &amp; Financial Aid*">
-                            <figcaption>
+                            <figcaption class="mt-4">
                                 <h5>Scholarships &amp; Financial Aid*</h5>
                             </figcaption>
                         </figure>
-                        <figure>
-                            <img width="120" src="../img/page-scholarship/icon3-waiver.png"
+                        <figure class="col">
+                            <img class="img-square" width="120" src="../img/page-scholarship/icon3-waiver.png"
                                 alt="50% Tuition Fee Waiver*">
-                            <figcaption>
+                            <figcaption class="mt-4">
                                 <h5>50% Tuition Fee Waiver*</h5>
                             </figcaption>
                         </figure>
-                        <figure>
-                            <img width="120" src="../img/page-scholarship/icon4-career.png"
+                        <figure class="col">
+                            <img class="img-square" width="120" src="../img/page-scholarship/icon4-career.png"
                                 alt="Complimentary MCKL Career Test">
-                            <figcaption>
+                            <figcaption class="mt-4">
                                 <h5>Complimentary MCKL Career Test</h5>
                             </figcaption>
                         </figure>
@@ -169,12 +168,14 @@
                                     alt="MCKL Excellence Award Scholarship 2022">
                             </figure>
                             <p class="lead mb-2">Limited availability, don't miss out!</p>
+                            <p class="lead mb-2 font-weight-bold"><b>Application closes on 30 April 2022.</b>
+                            </p>
                             <p><small>*Terms and Conditions apply</small></p>
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-lg-5">
-                            <div class="highlights__aid my-5">
+                        <div class="col-lg-6">
+                            <div class="my-5 p-5" style="border: 2px solid #f9ab20">
                                 <h5 class="mb-3 text-center">Other Scholarships & Financial Aid Available</h5>
                                 <ul>
                                     <li>MCKL-Industry Scholarships</li>
@@ -192,9 +193,8 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
-                                <div class="aspect--16x9">
-                                    <iframe class="w-100 h-100 border-0"
-                                        src="https://www.youtube.com/embed/1PRIbsuZwC4"></iframe>
+                                <div class="video-aspect-ratio-iframe">
+                                    <iframe src="https://www.youtube.com/embed/1PRIbsuZwC4"></iframe>
                                 </div>
                                 <p class="text-center my-4">
                                     Don't miss the opportunity to learn about MCKL's wide range of scholarships
@@ -209,7 +209,23 @@
             </section>
 
             <!-- programmes-offered -->
-            <include src="html/section-programmes_offered.html"></include>
+            <section id="programme" class="programme py-5">
+                <div class="container">
+                    <div class="row justify-content-center text-center mb-3">
+                        <div class="col-md-10">
+                            <h2>Programmes Offered in MCKL</h2>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+
+                            <include src="html/accordion-programmes_offered-scholarship.html"></include>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- partners -->
             <include src="html/section-partners.html" locals='{
@@ -227,7 +243,8 @@
             }'></include>
 
             <!-- cta -->
-            <section id="cta" class="cta color--invert text-center">
+            <section id="cta" class="cta color--invert text-center"
+                style="background: url('../img/page-scholarship/cta-background.jpg') no-repeat center; background-size: cover; padding: 3rem 0;">
                 <div class="container">
                     <div class="row" class="justify-content-center">
                         <div class="col-md-7" style="margin:auto;">

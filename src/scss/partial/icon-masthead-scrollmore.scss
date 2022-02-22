@@ -1,21 +1,3 @@
-@use "./abstracts" as *;
-// general
-@use "./partial/_general";
-@use "./partial/_button";
-@use "./partial/_header";
-@use "./partial/_sections";
-
-// vue
-@use "./vue/testimonial";
-@use "./vue/LeadForm.scss";
-// @use "./vue/ZohoWebform.scss";
-
-// import
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
-
-
-//------ mckl-openday ------//
-
 $circle-w: 45px;
 $circle-bg: #fff;
 $arrow-bg: #55544f;
@@ -24,50 +6,12 @@ $bezier-bounce: cubic-bezier(0.87, -0.41, 0.19, 1.44);
 $anim-timing: 3s;
 
 .masthead {
-    &--aspect {
-        aspect-ratio: 3 /4;
-        @include media-breakpoint-up(sm) {
-            aspect-ratio: 4/ 4;
-        }
-        @include media-breakpoint-up(md) {
-            aspect-ratio: 5/ 4;
-        }
-        @include media-breakpoint-up(lg) {
-            aspect-ratio: 16/ 9;
-        }
-        @include media-breakpoint-up(xl) {
-            aspect-ratio: 22/ 10;
-        }
-    }
-
-    &__bg {
-        background-image: url("../img/background/masthead-guy-mobile.jpg");
-        background-position: top;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        @include media-breakpoint-up(lg) {
-            background-image: url("../img/background/masthead-guy.jpg");
-        }
-    }
-
-    &__content {
-        margin: 2rem auto;
-        @include media-breakpoint-up(md) {
-            margin: 6rem auto;
-        }
-        @include media-breakpoint-up(lg) {
-            margin: 7rem auto;
-        }
-    }
-
-    h1.title {
-        font-weight: bold;
-        font-size: 2.8rem;
-        @include media-breakpoint-up(md) {
-            font-size: 4rem;
-        }
-    }
+    position: relative;
+}
+.masthead__scrollmore {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 0;
 }
 
 .masthead__animated-icon {
@@ -112,15 +56,6 @@ $anim-timing: 3s;
         transform-origin: bottom;
     }
 }
-
-.highlights figure {
-    aspect-ratio: 1/1;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 //--- animation ---//
 @keyframes blob-1-anim {
     0% {

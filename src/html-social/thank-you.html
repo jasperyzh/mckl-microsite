@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <include src="html/head-default.html"></include>
+
     <title>Diploma in Social Work | Methodist College Kuala Lumpur</title>
     <meta name="description"
         content="A pioneer in Malaysia's private education institution. Be recognised as professionals and members with the Malaysian Association of Social Workers.">
-
-    <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
 
     <meta property="og:url" content="https://www.mckl.edu.my/social-work/" />
     <meta property="og:type" content="website" />
@@ -24,30 +21,19 @@
     <meta name="twitter:description"
         content="A pioneer in Malaysia's private education institution. Be recognised as professionals and members with the Malaysian Association of Social Workers.">
 
-    <!-- thank-you.html -->
-    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="../scss/style.scss">
+    <style>
+        .masthead__bg {
+            background: url("../img/page-social/banner-mobile.jpg") no-repeat top;
+            background-size: cover;
+        }
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5F9B8QD');</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127424948-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-127424948-1');
-    </script>
-
-    <link rel="stylesheet" href="../scss/style-social.scss">
+        @media (min-width: 1024px) {
+            .masthead__bg {
+                background-image: url("../img/page-social/banner.jpg");
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -59,7 +45,7 @@
                 <nav
                     class="navbar navbar-expand-md navbar-dark justify-content-between align-items-center align-items-md-start p-0">
                     <div class="navbar-logo">
-                        <a class="navbar-logo__href" href="https://www.mckl.edu.my/open-day/">
+                        <a class="navbar-logo__href" href="/social-work">
                             <figure class="navbar-logo__figure">
                                 <img class="navbar-logo__img" src="../img/mckl-logo-portrait.png" alt="MCKL Logo">
                             </figure>
@@ -90,10 +76,11 @@
                 </nav>
             </div>
         </header>
+
         <main class="main">
 
             <!-- thank-you -->
-            <section id="thank-you" class="bg__shiny py-5 text-center">
+            <section id="thank-you" class="d-none bg__shiny py-5 text-center">
                 <h2 class="my-5 px-2">Thank you for your submission!</h2>
                 <a href="https://www.mckl.edu.my/open-day/">
                     <img src="../img/page-social/registration_day-banner.jpg" alt="Registration Day" width="420"
@@ -101,37 +88,39 @@
                 </a>
             </section>
 
-            <!-- websitebanner -->
-            <section id="masthead" class="masthead masthead-aspect masthead-bg py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-8">
-                            <div class="masthead-content">
-                                <h1 class="masthead__title font-weight-bold mb-3">Methodist College <br>Kuala Lumpur
+
+            <!-- masthead -->
+            <section id="masthead" class="masthead masthead--aspect-important masthead__bg py-5">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-1 d-none d-lg-block"></div>
+                        <div class="col-xl-6">
+                            <div class="mt-5">
+                                <h1 class="display-4 font-weight-bold">Methodist College
+                                    <br>Kuala Lumpur
                                 </h1>
-                                <p class="h4 font-weight-normal masthead__desc mb-4">Internationally Recognised and
+                                <p class="h2 mb-4">Internationally Recognised and
                                     Pioneer Provider of <span class="d-inline-block">Diploma in Social Work</span> in
-                                    Malaysia</p>
-                                <p class="h4 font-weight-normal masthead__desc__info">On-campus personalised counselling
-                                    available.<br>We are open from Mon - Sat, 9am - 5pm.</p>
-                                <a id="ga-enquire" class="btn btn-primary mt-3" href="#registration">Book Your
-                                    Appointment Now</a>
-                            </div>
-                            <!--<div class="scholarship-highlight">
-<p class="h4 font-weight-normal masthead__desc">50% Tuition Fee Waiver</p>
-</div>-->
-                            <div class="row mt-3">
-                                <div class="col-12 col-sm-10 ">
-                                    <div class="final-call">
-                                        <!--<img src="../img/page-social/final-call-btn.png" alt="">-->&nbsp;&nbsp;
-                                        <!--<p class="h5 font-weight-normal masthead__desc">Intake Close: 16th August 2021</p>-->
-                                    </div>
-                                </div>
+                                    Malaysia
+                                </p>
+                                <p class="h4">On-campus personalised counselling
+                                    available.</p>
+                                <p class="h5">We are open from Mon - Sat, 9am - 5pm</p>
+                                <div class="btn btn-primary btn-lg btn-primary--yellow my-3"
+                                    style="pointer-events: none;">
+                                    Book Your
+                                    Appointment Now</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="masthead__scrollmore">
+                    <include src="html/icon-masthead-scrollmore.html"></include>
+                </div>
+
             </section>
+
 
             <!-- intro -->
             <section id="intro" class="py-4 text-center bg__blue border-bottom__yellow">
@@ -455,147 +444,10 @@
                         </div>
                     </div>
 
-                    <div class="my-slider">
+                    <!-- slider-testimonial-social -->
+                    <include src="html/slider-testimonial-social.html" locals='{
+                    }'></include>
 
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“The whole academic and practicum of this course has been carefully
-                                            crafted to give a holistic insight into the social work worldview. It covers
-                                            as many subjects as possible to give us an overall core of what social work
-                                            is all about. The two internship exposures were tremendously priceless as
-                                            well. It is not only about getting more knowledge, values and skills, but
-                                            also the ability to translate what we learned into our workplace.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Jacqualine Yap Siew Peng
-                                            <br><small>Diploma in Social Work, MCKL</small>
-                                            <br><small>Strategy Coordinator/ Social Worker, STAMP BHD</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="../img/page-social/testimonials/jacqualine_yap_siew_peng.jpg"
-                                        alt="Sarah Marie Alicia Anthony">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“When I received the news that MCKL is offering Diploma in Social
-                                            Work, I looked at the syllabus and timetable and it was well-rounded. It
-                                            covered most aspects of social work; psychology, sociology, law and policy
-                                            and working with the target community (internships). It also fit my criteria
-                                            of not having to take a break off my work commitment because the classes
-                                            were during the weekends.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Rizuan Tempek
-                                            <br><small>Diploma in Social Work</small>
-                                            <br><small>Social Worker, Jaringan Kampung Orang Asli Semenanjung Malaysia
-                                                (JKOASM)</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="../img/page-social/testimonials/rizuan_tempek.jpg" alt="Ethan Wong">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“I always wanted to help in social work but at times I feel
-                                            incapable because I do not know what the right approaches are. After joining
-                                            DSW@MCKL, it helped me to be professional when doing social work,
-                                            non-judgmental, more competent and respectful at the same time.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Angelia Gan Lee Fan
-                                            <br><small>Diploma in Social Work, MCKL </small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="../img/page-social/testimonials/angelia_gan_lee_fan.jpg"
-                                        alt="Jesselyn Sin Jun Yi">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“MCKL's programme has helped me look at social work from a wider
-                                            perspective. Prior to this, I solely depended on my limited experience and
-                                            basic internal training skill. The course has given me the ability to
-                                            improve my practice at every level, right from initial contact, assessment,
-                                            case planning, residential care, community-based recovery and beyond.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Vijayan Ramasami
-                                            <br><small>Diploma in Social Work, MCKL [2020]</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="../img/page-social/testimonials/vijayan_ramasami.jpg"
-                                        alt="testimonial-jilian">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex  flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“Students that join MCKL Diploma Social Work Programme, come from a
-                                            wide age range of 19 - 55 years old, hence anybody can take up social work.
-                                            The important thing is to get the right kind of knowledge, information and
-                                            skills to work professionally, logically and rationally without getting
-                                            burned out, It is important for young people to come in the proper way,
-                                            through a certified programme.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Ms Elsie Lee
-                                            <br><small>Senior Course Advisor, MCKL</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="../img/page-social/testimonials/elsie_lee.jpg" alt="testimonial-angelia">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex  flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“The social needs and issues in Malaysia require workers who have
-                                            clear understanding of human and community needs, social work and
-                                            counselling skills, in-depth knowledge on abuse and addressing needs. There
-                                            have been cases where the volunteers role has resulted in further
-                                            psychological damage on victims or the volunteers have physically and
-                                            sexually abused victims. Therefore, there is a need for better equipping the
-                                            volunteers and potential full time staff with knowledge, skills or
-                                            competencies and values including a commitment to ethical practices.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Datuk Dr. Denison Jayasooria
-                                            <br><small>Co-Founder of DSW programme at MCKL</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5">
-                                    <img src="../img/page-social/testimonials/denison_jayasooria.jpg"
-                                        alt="testimonial-angelia">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </section>
 
@@ -670,7 +522,7 @@
             </section>
 
             <!-- About -->
-            <section id="about" class="about text-center">
+            <section id="about__mckl" class="about__mckl text-center">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8">
@@ -742,45 +594,40 @@
             </section>
 
             <!-- registration -->
-            <section id="registration" class="py-5 registration__bg">
+            <section id="registration" class="py-5 bg__blue--half">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col">
-
-                            <section class="registration__form container-fluid p-0">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-6">
-                                        <figure class="registration__figure">
-                                            <img src="../img/page-social/form-support.jpg"
-                                                alt="Students having a field day on MCKL field.">
-                                        </figure>
-                                    </div>
-                                    <div class="col-lg-6 p-4 py-5">
-
-                                        <div class="registration__content">
-                                            <h2 class="h4">Interested to Be a Qualified Social Worker?</h2>
-                                            <p>Fill in the form and kick start your career pathway with us.</p>
-                                            <ul>
-                                                <li>50% Tuition Fee Waiver*</li>
-                                                <li>Scholarships & Financial Aid*</li>
-                                                <li>Personalised Counselling</li>
-                                                <li>Complimentary MCKL Career Test</li>
-                                                <li>Campus Tour</li>
-                                                <li class="list-unstyled"><small>*Terms & Conditions apply.</small></li>
-                                            </ul>
-                                        </div>
-
-                                        <!-- vue-leadform -->
-                                        <form id="leadform-vue"></form>
-
-                                    </div>
+                        <section class="bg-white shadow container-fluid p-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <figure class="object-fit">
+                                        <img src="../img/page-social/form-support.jpg"
+                                            alt="Students having a field day at MCKL.">
+                                    </figure>
                                 </div>
-                            </section>
+                                <div class="col-lg-6 p-4 py-5">
 
-                        </div>
+                                    <h2 class="h4">Interested to Be a Qualified Social Worker?</h2>
+                                    <p>Fill in the form and kick start your career pathway with us.</p>
+                                    <ul style="font-size: 90%">
+                                        <li>50% Tuition Fee Waiver*</li>
+                                        <li>Scholarships & Financial Aid*</li>
+                                        <li>Personalised Counselling</li>
+                                        <li>Complimentary MCKL Career Test</li>
+                                        <li>Campus Tour</li>
+                                        <li class="list-unstyled"><small>*Terms & Conditions apply.</small></li>
+                                    </ul>
+
+                                    <!-- vue-leadform -->
+                                    <form id="leadform-vue"></form>
+
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
+
         </main>
 
         <!-- footer -->

@@ -1,5 +1,5 @@
 <template>
-  <section id="forum" class="forum my-5">
+  <section id="webinar" class="webinar my-5">
     <div class="container">
       <!-- head -->
       <head class="row justify-content-center">
@@ -180,21 +180,21 @@ export default {
     return {
       day1: [
         {
-          time: "10:30am – 10:35am",
+          time: "10:30am - 10:35am",
           title: "",
           desc: "Welcome Address",
           speaker: "Ms Samantha Ghouse",
           position: "Admission & Enrolment, Programme Specialist",
         },
         {
-          time: "10:35am – 11:10am",
+          time: "10:35am - 11:10am",
           title: "Saving Taxes",
           desc: "Taxations remains at the core of accountancy. Equip yourself with the right knowledge to explore wide career opportunities.",
           speaker: "Mr Low Chin Ann",
           position: "Course Advisor, ACCA",
         },
         {
-          time: "11:10am – 11:50am",
+          time: "11:10am - 11:50am",
           title:
             "Holistic US Education: Advantages and Scholarship Opportunities",
           desc: "The US remains home to the most diverse programmes with an abundance of Scholarships - Start with MCKL's ADTP programme.",
@@ -202,21 +202,21 @@ export default {
           position: "MCKL ADTP Alumni",
         },
         {
-          time: "11:50am – 12:25pm",
+          time: "11:50am - 12:25pm",
           title: "Future Proof with Business & Computing Studies",
           desc: "Advance education and global industry partnerships to equip students with in-demand skills for the IR4.0 era.",
           speaker: "Mr Yap Haw Sim",
           position: "Deputy Academic Director (Future Education)",
         },
         {
-          time: "12:25pm – 1:00pm",
+          time: "12:25pm - 1:00pm",
           title: "Up to 100% Scholarship and Tuition Fee Waiver!",
           desc: "50% tuition fee waiver, and 100% MCKL Industry Partner Joint Scholarship when registering for a wide range of MCKL diploma programmes.",
           speaker: "Mr Colin Wong",
           position: "Scholarship Advisor, Office of the Registrar",
         },
         {
-          time: "1:00pm – 1:05pm",
+          time: "1:00pm - 1:05pm",
           title: "",
           desc: "Closing Remarks",
           speaker: "Ms Samantha Ghouse",
@@ -226,14 +226,14 @@ export default {
 
       day2: [
         {
-          time: "10:30am – 10:35am",
+          time: "10:30am - 10:35am",
           title: "",
           desc: "Welcome Address",
           speaker: "Ms Samantha Ghouse",
           position: "Admission & Enrolment, Programme Specialist",
         },
         {
-          time: "10:35am – 11:10am",
+          time: "10:35am - 11:10am",
           title: "A.C.E with Pre-U @ MCKL",
           desc: "MCKL continues to be the leading choice in Pre-U programmes, paving the way for students to Top Universities across the globe.",
           speaker: "Mr Adrian Yao",
@@ -241,21 +241,21 @@ export default {
             "Academic Director, External Programmes and Head, Teaching & Learning",
         },
         {
-          time: "11:10am – 11:45am",
+          time: "11:10am - 11:45am",
           title: "Up to 100% Scholarship and Tuition Fee Waiver!",
           desc: "50% tuition fee waiver, and 100% MCKL Industry Partner Joint Scholarship when registering for a wide range of MCKL diploma programmes.",
           speaker: "Mr Colin Wong",
           position: "Scholarship Advisor, Office of the Registrar",
         },
         {
-          time: "11:45am – 12:20pm",
+          time: "11:45am - 12:20pm",
           title: "Rewarding Career Opportunities as a Qualified Social Worker",
           desc: "Grab these rewarding opportunities by being a qualified social worker now with MCKL.",
           speaker: "Ms Jolyn Hong",
           position: "Head of Department, Diploma in Social Work",
         },
         {
-          time: "12:20pm – 12:55pm",
+          time: "12:20pm - 12:55pm",
           title:
             "Early Childhood Education: The in-demand career for 21st century learners",
           desc: "MCKL's proven track record and global network gives learners the edge in this profession with in-demand skills.",
@@ -263,7 +263,7 @@ export default {
           position: "Assistant, Early Childhood Education",
         },
         {
-          time: "12:55pm – 1:00pm",
+          time: "12:55pm - 1:00pm",
           title: "",
           desc: "Closing Remarks",
           speaker: "Ms Samantha Ghouse",
@@ -334,69 +334,69 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-@use "../../scss/abstracts" as *;
-@use "bootstrap/scss/bootstrap" as *;
 
-.nav-pills .nav-link,
-.nav-pills .show > .nav-link {
-  padding: 10px 38px !important;
-  margin: 1rem;
-  border: 3px solid $color-blue;
-  border-radius: 0;
-  color: $color-blue;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  background-color: $color-blue;
-  color: #fff;
-}
-
-// forum
-.session {
-  display: flex;
-  flex-direction: column;
-
-  @include media-breakpoint-up(sm) {
-    flex-direction: row;
+<style lang="scss">
+#webinar {
+  .nav-pills .nav-link,
+  .nav-pills .show > .nav-link {
+    padding: 10px 38px !important;
+    margin: 1rem;
+    border: 3px solid $color-blue;
+    border-radius: 0;
+    color: $color-blue;
   }
 
-  .time {
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-    width: 41%;
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: $color-blue;
+    color: #fff;
+  }
+
+  // forum
+  .session {
+    display: flex;
+    flex-direction: column;
 
     @include media-breakpoint-up(sm) {
-      margin-right: 1rem;
+      flex-direction: row;
     }
-  }
-  .detail {
-    width: 100%;
-    h3 {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    p {
-      font-size: 0.8825rem;
-    }
-  }
 
-  ul.speaker {
-    padding-left: 1rem;
-    li {
-      font-size: 0.8rem;
-      max-width: 80%;
-      margin-left: auto;
-      list-style: outside;
-      margin-left: unset;
-    }
-    .name {
+    .time {
       font-weight: bold;
+      margin-bottom: 0.25rem;
+      width: 41%;
+
+      @include media-breakpoint-up(sm) {
+        margin-right: 1rem;
+      }
     }
-    .position {
-      list-style: none;
-      font-style: italic;
+    .detail {
+      width: 100%;
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: 0.8825rem;
+      }
+    }
+
+    ul.speaker {
+      padding-left: 1rem;
+      li {
+        font-size: 0.8rem;
+        max-width: 80%;
+        margin-left: auto;
+        list-style: outside;
+        margin-left: unset;
+      }
+      .name {
+        font-weight: bold;
+      }
+      .position {
+        list-style: none;
+        font-style: italic;
+      }
     }
   }
 }

@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <include src="html/head-default.html"></include>
+
     <title>ACCA - Professional Accounting | Methodist College Kuala Lumpur</title>
     <meta name="description"
         content="Enrol for your ACCA professional accounting programme with MCKL. SPM leavers are encouraged to start with ACCA FIA to fast-tracked their ACCA Qualification.">
-
-    <link rel="shortcut icon" type="image/png" href="../img/page-acca/favicon.png" />
 
     <meta property="og:url" content="https://www.mckl.edu.my/acca/" />
     <meta property="og:type" content="website" />
@@ -24,30 +21,20 @@
     <meta name="twitter:description"
         content="Enrol for your ACCA professional accounting programme with MCKL. SPM leavers are encouraged to start with ACCA FIA to fast-tracked their ACCA Qualification.">
 
-    <!-- thank-you.html -->
-    <!-- <meta name="robots" content="noindex"> -->
+    <link rel="stylesheet" href="../scss/style.scss">
+    <!-- <link rel="stylesheet" href="../scss/style-acca.scss"> -->
+    <style>
+        .masthead__bg {
+            background: url("../img/page-acca/banner-mobile.jpg") no-repeat top;
+            background-size: cover;
+        }
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5F9B8QD');</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127424948-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-127424948-1');
-    </script>
-
-    <link rel="stylesheet" href="../scss/style-acca.scss">
+        @media (min-width: 1024px) {
+            .masthead__bg {
+                background-image: url("../img/page-acca/banner.jpg");
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -59,7 +46,7 @@
                 <nav
                     class="navbar navbar-expand-md navbar-dark justify-content-between align-items-center align-items-md-start p-0">
                     <div class="navbar-logo">
-                        <a class="navbar-logo__href" href="https://www.mckl.edu.my/open-day/">
+                        <a class="navbar-logo__href" href="/acca">
                             <figure class="navbar-logo__figure">
                                 <img class="navbar-logo__img" src="../img/mckl-logo-portrait.png" alt="MCKL Logo">
                             </figure>
@@ -93,36 +80,52 @@
 
         <main class="main">
 
-            <!-- thank-you.html -->
-            <!-- <section id="thank-you" class="bg__shiny py-5 text-center">
+            <!-- thank-you -->
+            <section id="thank-you" class="d-none bg__shiny py-5 text-center">
                 <h2 class="h1 my-5 py-5 px-2">Thank you for your submission!</h2>
                 <a href="https://www.mckl.edu.my/open-day/">
-                    <img src="../img/page-acca/registration_day-banner.jpg" alt="Registration Day" width="420" class="border mb-3">
+                    <img src="../img/page-acca/registration_day-banner.jpg" alt="Registration Day" width="420"
+                        class="border mb-3">
                 </a>
-            </section> -->
+            </section>
 
             <!-- masthead -->
-            <section id="masthead" class="masthead masthead-aspect masthead-bg py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-8">
-                            <div class="masthead-content">
-                                <h1 class="masthead__title font-weight-bold mb-3">Methodist College <br>Kuala Lumpur
+            <section id="masthead" class="masthead masthead--aspect-important masthead__bg py-5">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-1 d-none d-lg-block"></div>
+                        <div class="col-xl-6">
+                            <div class="mt-5 py-2 px-4" style="background-color: rgba(255,255,255,.5);">
+                                <h1 class="display-4 font-weight-bold">Methodist College
+                                    <br>Kuala Lumpur
                                 </h1>
-                                <p class="h4 font-weight-normal masthead__desc mb-4">Be An ACCA Certified Chartered
-                                    Accountant</p>
-                                <p class="h4 font-weight-normal masthead__desc__info">On-campus personalised counselling
-                                    available.<br>We are open from Mon - Sat, 9am - 5pm.</p>
-                                <a id="ga-enquire" class="btn btn-primary mt-3" href="#registration">Book Your
-                                    Appointment Now</a>
-                            </div>
-                            <div class="circle circle-top d-flex">
-                                <figure><img src="../img/page-acca/icon-header-acca.png" alt=""></figure>
-                                <figure><img src="../img/page-acca/icon-header-acca_cbe.png" alt=""></figure>
+                                <p class="h2 mb-4">Be An ACCA Certified Chartered
+                                    Accountant
+                                </p>
+                                <p class="h4">On-campus personalised counselling
+                                    available.</p>
+                                <p class="h5">We are open from Mon - Sat, 9am - 5pm.</p>
+                                <div class="btn btn-primary btn-lg btn-primary--yellow my-3"
+                                    style="pointer-events: none;">
+                                    Book Your
+                                    Appointment Now</div>
+                                <div class="circle circle-top d-flex">
+                                    <figure class="m-0"><img width="120" src="../img/page-acca/icon-header-acca.png"
+                                            alt="">
+                                    </figure>
+                                    <figure class="m-0"><img width="120" src="../img/page-acca/icon-header-acca_cbe.png"
+                                            alt="">
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="masthead__scrollmore">
+                    <include src="html/icon-masthead-scrollmore.html"></include>
+                </div>
+
             </section>
 
             <!-- intro -->
@@ -137,7 +140,7 @@
             </section>
 
             <!-- about -->
-            <section id="about" class="pt-5 pb-5 text-center">
+            <section id="why_acca" class="pt-5 pb-5 text-center">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8">
@@ -178,8 +181,9 @@
             </section>
 
             <!-- programme -->
-            <section id="programme-acca" class="programme-acca__bg py-5">
-                <div class="container-fluid">
+            <section id="programme_listing" class="py-5"
+                style="background: url('../img/page-acca/bg-programme.jpg') no-repeat top; background-size: cover;">
+                <div class=" container-fluid">
                     <div class="row justify-content-center text-center mb-4">
                         <div class="col-md-10">
                             <h2 class="color__yellow">Professional Accounting Programmes with MCKL</h2>
@@ -187,7 +191,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="programme-acca__content bg__blue">
+                            <div class="programme_listing__content bg__blue">
                                 <h4>ACCA Foundation in Accountancy (ACCA FIA)</h4>
                                 <p>KPT/JPS(R2/344/3/0183)(A9696)01/24</p>
                                 <h6>Intake: January, April & July 2022</h6>
@@ -197,7 +201,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="programme-acca__content bg__blue">
+                            <div class="programme_listing__content bg__blue">
                                 <h4>Association of Chartered Certified Accountants (ACCA)</h4>
                                 <p>KPT/JPS(R/344/6/0064)(FA1206)06/22</p>
                                 <h6>Intake: January & July 2022</h6>
@@ -241,135 +245,15 @@
                         </div>
                     </div>
 
+                    <!-- slider-testimonial-acca -->
+                    <include src="html/slider-testimonial-acca.html" locals='{
+                    }'></include>
 
-                    <div class="my-slider">
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“I would strongly encourage ACCA students to join MCKL as I enjoyed
-                                            the
-                                            college's study environment, its lecturers, the affordable course fee, and
-                                            most
-                                            of all, my college friends were like a closely knitted family since we were
-                                            a
-                                            small and focused group.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Lee Shu Li
-                                            <br><small>ACCA, MCKL</small>
-                                            <br><small>Y.H Goh &amp; CO, Malaysia</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5 testimonial__profilepic">
-                                    <img src="../img/page-acca/testimonial-lee_shu_li.jpg" alt="Tee Jia En">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“I chose MCKL as it is widely recognised as one of the top tuition
-                                            providers for CAT and ACCA which made me comfortable to undergo both
-                                            programmes
-                                            at the college. Despite the challenging nature of my course, my lecturers
-                                            guided
-                                            me throughout the journey, and I also did have my share of fun thanks to a
-                                            great
-                                            bunch of friends I made in MCKL.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Ruphinee Chandran
-                                            <br><small>ACCA, MCKL</small>
-                                            <br><small>BSc (Hons) Degree in Applied Accounting, Oxford Brookes
-                                                University</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5 testimonial__profilepic">
-                                    <img src="../img/page-acca/testimonial-ruphinee.jpg" alt="Tee Jia En">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“Before I handed in my admission form to MCKL, I visited many other
-                                            colleges. While other colleges may have better facilities, I felt something
-                                            different about MCKL. The way they run the college was not as commercialised
-                                            and
-                                            they often put the students' benefit as their main priority.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Ang Guo Weng
-                                            <br><small>ACCA, MCKL</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5 testimonial__profilepic">
-                                    <img src="../img/page-acca/testimonial-guo_weng.JPG" alt="Tee Jia En">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“I first completed my F1 paper at a tuition provider and was then
-                                            moving
-                                            around different
-                                            colleges to complete my ACCA studies according to the lecturers' capability,
-                                            but
-                                            after completing my
-                                            F6, F7 and F8 in MCKL, I decided to continue my ACCA journey here due to the
-                                            facilities, environment
-                                            and especially the many friends I made.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Tee Jia En
-                                            <br><small>ACCA, MCKL</small>
-                                            <br><small>RCE Capital Berhad</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5 testimonial__profilepic">
-                                    <img src="../img/page-acca/testimonial-jia_ern.jpg" alt="Tee Jia En">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial">
-                            <div class="d-flex flex-wrap">
-                                <div class="col-md-7 d-flex align-items-center">
-                                    <blockquote class="blockquote">
-                                        <p class="">“I studied both CAT and ACCA in MCKL and I am now a lecturer under
-                                            the ACCA FIA programme here. When I arrived in MCKL, I was immediately taken
-                                            up not only by the pathway provided, but also the scholarship offered here
-                                            in MCKL. It is an institution that focuses on the people and how interaction
-                                            between humans are vital in life.”
-                                        </p>
-                                        <footer class="testimonial__footer h4">Ryan P. Abraham
-                                            <br><small>ACCA, MCKL</small>
-                                            <br><small>BSc (Hons) Degree in Applied Accounting, Oxford Brookes
-                                                University Methodist College Kuala Lumpur</small>
-                                        </footer>
-                                    </blockquote>
-                                </div>
-                                <div class="col-md-5 testimonial__profilepic">
-                                    <img src="../img/page-acca/testimonial-ryan.jpg" alt="Tee Jia En">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </section>
 
             <!-- About -->
-            <section id="about" class="about text-center">
+            <section id="about__mckl" class="about__mckl text-center">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8">
@@ -435,44 +319,37 @@
             </section>
 
             <!-- registration -->
-            <section id="registration" class="py-5 registration__bg">
+            <section id="registration" class="py-5 bg__blue--half">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col">
-
-                            <section class="registration__form container-fluid p-0">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-6">
-                                        <figure class="registration__figure">
-                                            <img src="../img/page-acca/form-support.jpg"
-                                                alt="Students having a field day on MCKL field.">
-                                        </figure>
-                                    </div>
-                                    <div class="col-lg-6 p-4 py-5">
-
-                                        <div class="registration__content">
-                                            <h2 class="h4">Enquire for personal education advice</h2>
-                                            <p>Fill in the form and kick start your education journey with us.</p>
-                                            <ul>
-                                                <li>Scholarships & Financial Aid*</li>
-                                                <li>Campus Tour</li>
-                                                <li>Personalised Counselling</li>
-                                                <li class="list-unstyled"><small>*Terms & Conditions apply.</small></li>
-                                            </ul>
-                                        </div>
-
-                                        <!-- vue-leadform -->
-                                        <form id="leadform-vue">
-                                        </form>
-
-                                    </div>
+                        <section class="bg-white shadow container-fluid p-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <figure class="object-fit">
+                                        <img src="../img/page-acca/form-support.jpg"
+                                            alt="Students having a good time at MCKL.">
+                                    </figure>
                                 </div>
-                            </section>
+                                <div class="col-lg-6 p-4 py-5">
+                                    <h2 class="h4">Enquire for personal education advice</h2>
+                                    <p>Fill in the form and kick start your education journey with us.</p>
+                                    <ul style="font-size: 90%">
+                                        <li>Scholarships & Financial Aid*</li>
+                                        <li>Campus Tour</li>
+                                        <li>Personalised Counselling</li>
+                                        <li class="list-unstyled"><small>*Terms & Conditions apply.</small></li>
+                                    </ul>
 
-                        </div>
+                                    <!-- vue-leadform -->
+                                    <form id="leadform-vue"></form>
+
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
+
         </main>
 
         <!-- footer -->

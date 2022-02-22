@@ -1,19 +1,4 @@
-// jquery
-const jQuery = require("jquery");
-window.$ = window.jQuery = jQuery;
-
-// import library
-import "@babel/polyfill";
-import "jquery-validation";
-import "bootstrap/dist/js/bootstrap.bundle";
-import "bootstrap-select";
-
-// import js
-import "./components/ScrollToSection.js";
-
-// vue
-import Vue from 'vue';
-
+// leadform
 window.SHEET_NAME = "openday";
 window.PROGRAMME_INTERESTED = {
     "Pre-U / Foundation": {
@@ -48,14 +33,7 @@ window.PROGRAMME_INTERESTED = {
         TLERSCW: "Teaching &amp; Learning and Education Related Short Courses &amp; Workshop",
     },
 };
-import LeadForm from './vue/LeadForm';
-// import ZohoWebform from './vue/ZohoWebform';
-import Testimonial from './vue/Testimonial';
 
-// June 2021 - itinerary for webinar
-// import Webinar from './components/Webinar';
-
-new Vue({ render: createElement => createElement(Testimonial) }).$mount('#testimonial-vue');
-
-new Vue({ render: createElement => createElement(LeadForm) }).$mount('#leadform-vue');
-// new Vue({ render: createElement => createElement(ZohoWebform) }).$mount('#zohowebform-vue');
+// import
+import "./_main-default.js";
+import "./_vue-leadform.js";

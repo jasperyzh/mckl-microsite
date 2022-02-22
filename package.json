@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "parcel src/html/index-zoho.html",
     "dev": "parcel src/**/*.html",
     "build": "parcel build src\\html-acca\\*.html --public-url='./' --out-dir='build/acca' && parcel build src\\html-digital\\*.html --public-url='./' --out-dir='build/digital-programme' && parcel build src\\html-openday\\*.html --public-url='./' --out-dir='build/open-day' && parcel build src\\html-scholarship\\*.html --public-url='./' --out-dir='build/scholarship' && parcel build src\\html-udemy\\*.html --public-url='./' --out-dir='build/short-courses' && parcel build src\\html-social\\*.html --public-url='./' --out-dir='build/social-work'"
   },
@@ -12,26 +11,25 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "bootstrap": "^4.6.0",
-    "bootstrap-icons": "^1.4.0",
     "bootstrap-select": "^1.13.18",
-    "css-loader": "^6.5.1",
     "img": "^3.0.3",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.32.8",
     "tiny-slider": "^2.9.3",
-    "vue": "^2.6.14",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue": "^2.6.14"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.3.1",
     "@parcel/transformer-sass": "^2.3.1",
     "@parcel/transformer-vue": "^2.2.0",
     "@vue/component-compiler-utils": "^3.2.2",
-    "cssnano": "^4.1.10",
+    "css-loader": "^6.5.1",
+    "cssnano": "^5.0.17",
+    "parcel-bundler": "^1.12.5",
     "posthtml": "^0.16.5",
     "posthtml-include": "^1.7.2",
+    "sass": "^1.32.8",
+    "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.14"
   }
 }

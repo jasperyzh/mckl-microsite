@@ -2,65 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <include src="html/head-default.html"></include>
+
     <title>Short Courses | Methodist College Kuala Lumpur</title>
     <meta name="description"
         content="MCKL offers a wide range of free online courses aimed at helping students to gain additional skills, all while learning in their own time and space.">
 
-    <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../scss/style.scss">
+    <style>
+        .masthead__bg {
+            background: url("../img/page-udemy/triangle-mobile.svg") no-repeat bottom;
+            background-size: auto;
+        }
 
-    <!-- thank-you.html -->
-    <!-- <meta name="robots" content="noindex"> -->
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WKV6R6J');</script>
-    <!-- End Google Tag Manager -->
-
-    <link rel="stylesheet" href="../scss/style-udemy.scss">
-
+        @media (min-width: 1024px) {
+            .masthead__bg {
+                background-image: url("../img/page-udemy/triangle.svg");
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKV6R6J" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div id="site-container">
 
-
         <!-- header -->
-        <include src="html-udemy/header-udemy.html"></include>
+        <include src="html-udemy/header.html"></include>
 
         <main class="main">
-            <!--<section id="masthead" class="masthead">
-<div class="container-fluid">
-<div class="row">
-<picture class="picture__masthead">
-<source media="(min-width:576px)" srcset="https://via.placeholder.com/1600x900">
-<img src="https://via.placeholder.com/300x400" alt="Masthead">
-</picture>
-</div>
-</div>
-</section>-->
 
-            <section id="masthead" class="masthead masthead__course masthead__bg">
-                <div class="container">
-                    <div class="row justify-content-end">
+            <!-- masthead -->
+            <section id="masthead" class="masthead masthead--aspect-important masthead__bg py-5">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
                         <div class="col-md-6">
-                            <p class="text-uppercase"><small>Course Preview</small></p>
-                            <h2>The Game of Life</h2>
-                            <p class="pt-3">Making the Right Decisions</p>
+                            <div class="mt-5">
+                                <p class="text-uppercase"><small>Course Preview</small></p>
+                                <h1 class="display-4 font-weight-bold">The Game of Life
+                                </h1>
+                                <p class="pt-3">Making the Right Decisions
+                                </p>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="video-aspect-ratio-iframe">
@@ -71,6 +54,7 @@
                 </div>
             </section>
 
+            <!-- courses -->
             <section class="courses pb-5" id="courses">
                 <div class="container">
                     <div class="container">
@@ -88,12 +72,12 @@
                 </div>
             </section>
 
-            <section id="programme-acca" class="programme-acca__bg py-5">
+            <section id="course_info" class="py-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 mb-3">
-                            <div class="programme-acca__content">
-                                <div class="programme-acca__content-align">
+                            <div class="course_info__content">
+                                <div class="course_info__content-align">
                                     <h5>Course Description</h5>
                                     <ul class="terms-condition__list">
                                         <li class="terms-condition__list-point">The Game of Life is a short course that
@@ -117,8 +101,8 @@
                             </div>
                         </div>
                         <div class="col-lg-6 mb-3">
-                            <div class="programme-acca__content">
-                                <div class="programme-acca__content-align">
+                            <div class="course_info__content">
+                                <div class="course_info__content-align">
                                     <h5>What will students learn in the course?</h5>
                                     <ul class="terms-condition__list">
                                         <li class="terms-condition__list-point">Decision making</li>
@@ -146,22 +130,14 @@
                 </div>
             </section>
 
-            <section class="blurb layer">
-                <div class="container">
-                    <div class="row py-5 justify-content-center">
-                        <div class="col-12 col-md-10 text-center text-md-center align-items-center">
-                            <div>
-                                <h1 class="blurb__heading">Even the smallest decision-making can change your life for
-                                    the better</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- quote -->
+            <include src="html-udemy/quote.html" locals='{
+                "quote":"Even the smallest decision-making can change your life for the better"
+            }'></include>
 
             <section id="instructor" class="instructor py-5">
                 <div class="container">
-                    <div class="row mb-5">
+                    <div class="row mb-5 text-center">
                         <div class="col-md-12">
                             <div class="instructor instructor__header">
                                 <h2 class="pb-3">
@@ -176,69 +152,13 @@
                         <article class="col-12 col-lg-10 tab-pane fade show active">
 
                             <section class="container">
-                                <div class="row row-cols-2 row-cols-md-4 text-center instructor__align-mobile">
+                                <div class="row row-cols-2 row-cols-md-4 justify-content-center">
 
                                     <div class="col mb-3">
-                                        <!-- Button trigger modal -->
-                                        <button data-toggle="modal" data-target="#instructor-info1"
-                                            style="background-color:transparent;border:0;">
-                                            <figure>
-                                                <img width="180" height="180"
-                                                    src="../img/page-udemy/speakers/eddryll_teo.png" alt="..." />
-                                            </figure>
-                                            <h5 class="mb-1">Mr Eddryll Teo</h5>
-                                            <p class="text-muted">Head, MPU (Mata Pelajaran Umum)</p>
-                                        </button>
+                                        <!-- eddryll_teo -->
+                                        <include src="html-udemy/instructors/eddryll_teo.html"></include>
                                     </div>
 
-                                </div>
-
-                                <!-- The Modal 1 -->
-                                <div class="modal fade" id="instructor-info1">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <figure>
-                                                    <img width="80" src="../img/page-udemy/mckl-logo.png"
-                                                        alt="MCKL Logo">
-                                                </figure>
-                                                <button type="button" class="close"
-                                                    data-dismiss="modal">&times;</button>
-                                            </div>
-                                            <!-- Modal body -->
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-md-5"><img
-                                                            src="../img/page-udemy/speakers/eddryll_teo-info.jpg"
-                                                            alt=""></div>
-                                                    <div class="col-md-7">
-                                                        <h6>Name</h6>
-                                                        <p>Mr Eddryll Teo</p>
-                                                        <h6>Biography</h6>
-                                                        <p>Mr. Eddryll is a young educator teaching Character Formation
-                                                            (MCKL DNA). He has a passion for impacting the younger
-                                                            generation in understanding their identity and purpose. He
-                                                            co-created with his wife a module called Matters of the
-                                                            Heart (MOTH) that focuses on identity search and community
-                                                            building. He oversees two podcasts, GGWP Podcast and
-                                                            Malaysian Christian Talks. He also manages a meme account
-                                                            called Malaysian Christian Memes.</p>
-                                                        <p>Mr. Eddryll received his Bachelor’s of Psychology from HELP
-                                                            University, Ba of Theology from St. Paul’s Theological
-                                                            College and in the process of completing his Masters in
-                                                            Divinity in Seminary Theology Malaysia (STM). He is also
-                                                            digitally certified under ICDL with Spreadsheets, Advanced
-                                                            Power Point, Internet of Things, and Digital Marketing.</p>
-                                                        <p>His current passion is in teaching Theology in other
-                                                            universities and data analytics of online behaviour all to
-                                                            continue in impacting the younger generation wherever he is
-                                                            at.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
                             </section>
@@ -247,40 +167,8 @@
                 </div>
             </section>
 
-            <!--<div class="container">
-<div class="row pb-5 justify-content-center">
-<div class="col-md-12 text-center text-md-center align-items-center order-2 order-md-1">
-<div class="scholarships__intro">
-<a id="enquire-instructor" class="nav-link btn btn-instructor" href="#">Learn more about our instructors</a>
-</div>
-</div>
-</div>
-</div>-->
-
-            <section id="cta" class="cta">
-                <div class="container">
-                    <div class="row" style="justify-content:right;">
-                        <div class="col-md-6" style="margin:auto;">
-                            <h2 class="pb-3" style="color:#ffffff;">
-                                Explore Your Passion With Us
-                            </h2>
-                            <p class="pb-3">
-                                Welcome to Methodist College Kuala Lumpur – a College where values <br>and tradition
-                                meet excellence in education!
-                            </p>
-                        </div>
-                        <div class="col-md-6">
-                            <h4 class="pb-3" style="color:#ffffff;">
-                                I'm interested, tell me more!
-                            </h4>
-                            <!-- <form id="zoho-webform"></form> -->
-                            <script
-                                src='https://crm.zoho.com/crm/WebFormServeServlet?rid=3df8513a44e8ee0dc6e36209ffd3db240675dcf6887b53b2398a3abd933e9f68gid4d9f4e6fae5a20e0cd8c2a36a070b76984439065bac62cc4cea2c71c2a1d58fb&script=$sYG&utm_nooverride=1'></script>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- cta -->
+            <include src="html-udemy/cta.html"></include>
 
         </main>
 
