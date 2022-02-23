@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/**/*.html",
-    "build": "parcel build src\\html-acca\\*.html --public-url='./' --out-dir='build/acca' && parcel build src\\html-digital\\*.html --public-url='./' --out-dir='build/digital-programme' && parcel build src\\html-openday\\*.html --public-url='./' --out-dir='build/open-day' && parcel build src\\html-scholarship\\*.html --public-url='./' --out-dir='build/scholarship' && parcel build src\\html-udemy\\*.html --public-url='./' --out-dir='build/short-courses' && parcel build src\\html-social\\*.html --public-url='./' --out-dir='build/social-work'"
+    "build": "parcel build src\\html-acca\\*.html --public-url='./' --out-dir='build/acca' && parcel build src\\html-digital\\*.html --public-url='./' --out-dir='build/digital-programme' && parcel build src\\html-openday\\*.html --public-url='./' --out-dir='build/open-day' && parcel build src\\html-scholarship\\*.html --public-url='./' --out-dir='build/scholarship' && parcel build src\\html-udemy\\*.html --public-url='./' --out-dir='build/short-courses' && parcel build src\\html-social\\*.html --public-url='./' --out-dir='build/social-work'",
+    "test-build": "parcel build src\\html-udemy\\*.html --no-minify --public-url=./ --out-dir=build/short-courses"
   },
   "author": "",
   "license": "ISC",
