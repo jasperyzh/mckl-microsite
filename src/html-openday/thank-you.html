@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="../scss/style.scss">
     <style>
         .masthead__bg {
-            background: url("../img/background/masthead-guy-mobile.jpg") no-repeat top;
+            background: url("../img/page-openday/c2openday_mobile-480.jpg") no-repeat top;
             background-size: cover;
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 768px) {
             .masthead__bg {
-                background-image: url("../img/background/masthead-guy.jpg");
+                background-image: url("../img/page-openday/c2openday_desktop-1920.jpg");
+            }
+        }
+
+        @media (max-width: 767px) {
+            .masthead--aspect-important {
+                aspect-ratio: 3/4;
             }
         }
     </style>
@@ -75,7 +81,7 @@
 
             <!-- masthead -->
             <section id="masthead" class="masthead masthead--aspect-important masthead__bg py-5">
-                <div class="container h-100">
+                <!-- <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-1 d-none d-lg-block"></div>
                         <div class="col-xl-6">
@@ -94,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="masthead__scrollmore">
                     <include src="html/icon-masthead-scrollmore.html"></include>
@@ -141,7 +147,7 @@
                                 <img class="img-square" width="120" src="../img/highlights/mckl-international.png"
                                     alt="">
                             </figure>
-                            <h3 class="h5">100% MCKL-Industry Scholarship*</h3>
+                            <h3 class="h5">100% Scholarship*</h3>
                         </div>
                         <div class="col">
                             <figure>
@@ -171,7 +177,7 @@
                     <div class="row justify-content-center my-4">
                         <div class="col-md-8">
                             <a id="ga-scholarships_enquire" href="#registration"
-                                class="btn btn-primary btn-primary--red btn-sm">Enquire
+                                class="btn btn-primary btn-primary--red">Enquire
                                 today</a>
                         </div>
                     </div>
@@ -189,13 +195,13 @@
                 <div class="container">
                     <div class="justify-content-center mb-3 row text-center">
                         <div class="col-md-10">
-                            <h2>Programmes Offered in Mid-Year Intake 2022</h2>
+                            <h2>Programmes Offered in April-July 2022 Intake</h2>
                         </div>
                     </div>
                     <div class="justify-content-center row">
                         <div class="col-md-10">
 
-                            <include src="html/accordion-programmes_offered-openday.html"></include>
+                            <include src="html-openday/accordion-programmes_offered-openday.html"></include>
 
                         </div>
                     </div>
@@ -232,7 +238,7 @@
                             <div class="row no-gutters">
                                 <div class="col-lg-6">
                                     <figure class="object-fit">
-                                        <img src="../img/background/form-support2.jpg   "
+                                        <img src="../img/page-openday/form_support.jpg"
                                             alt="Students having a field day on MCKL field.">
                                     </figure>
                                 </div>
@@ -242,7 +248,7 @@
                                     <p>Explore the right education programme that best fits you.</p>
                                     <ul style="font-size: 90%">
                                         <li>Top Up 1 Year to complete your degree in Australia & Ireland*</li>
-                                        <li>100% MCKL Industry Partner Joint Scholarship*</li>
+                                        <li>100% Scholarship*</li>
                                         <li>50% Tuition Fee Waiver On The Spot*</li>
                                         <li>RM500 Fee Waiver*</li>
                                         <li>Internship & Career Opportunities</li>

@@ -107,7 +107,6 @@
             class="form-control"
             placeholder="e.g. Adam Smith"
           />
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="form-group">
@@ -126,7 +125,6 @@
             class="form-control"
             placeholder="e.g. adam.smith@email.com"
           />
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="form-group">
@@ -144,7 +142,19 @@
             class="form-control"
             placeholder="e.g. 0108881234"
           />
-          <div class="zcwf_col_help"></div>
+        </div>
+      </div>
+      <div class="zcwf_row zoho__d-none d-none">
+        <div class="zcwf_col_lab">
+          <label for="LEADCF7">Preparatory Programmes</label>
+        </div>
+        <div class="zcwf_col_fld">
+          <select class="zcwf_col_fld_slt" id="LEADCF7" name="LEADCF7">
+            <option value="-None-">-None-</option>
+            <option value="PREPCAL (MAY)">PREPCAL (MAY)</option>
+            <option value="PREPAUSMAT (MAY)">PREPAUSMAT (MAY)</option>
+            <option value="FLY Bootcamp">FLY Bootcamp</option>
+          </select>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -160,7 +170,6 @@
             </option>
             <option value="AUSMAT">AUSMAT</option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -182,7 +191,6 @@
             <option value="DDM">DDM</option>
             <option value="FINTECH">FINTECH</option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -196,7 +204,6 @@
             <option value="ACCA (PT)">ACCA (PT)</option>
             <option value="ACCA FIA">ACCA FIA</option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -245,7 +252,6 @@
             <option value="FLY Programme">FLY Programme</option>
             <option value="AWS Academy">AWS Academy</option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -258,7 +264,6 @@
             maxlength="255"
             value="-"
           />
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -269,7 +274,6 @@
             <option selected value="KL Campus">KL Campus</option>
             <option value="Penang Pykett Campus">Penang Pykett Campus</option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -282,7 +286,6 @@
               Microsite (MCKL Website)
             </option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
 
@@ -302,7 +305,6 @@
             </option>
             <option value="Scholarships">Scholarships</option>
           </select>
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
       <div class="zcwf_row zoho__d-none d-none">
@@ -317,7 +319,6 @@
             maxlength="255"
             value=""
           />
-          <div class="zcwf_col_help"></div>
         </div>
       </div>
 
@@ -370,6 +371,11 @@ export default {
     return {
       $form: "",
       programme_interested: {
+        "Preparatory Programmes": {
+          "PREPCAL (MAY)": "PREPCAL (MAY)",
+          "PREPAUSMAT (MAY)": "PREPAUSMAT (MAY)",
+          "FLY Bootcamp": "FLY Bootcamp",
+        },
         "Pre-U / Foundation": {
           "Cambridge A Level": "Cambridge A Level",
           AUSMAT: "Australian Matriculation",
@@ -410,7 +416,7 @@ export default {
             "Teaching & Learning and Education Related Short Courses & Workshop",
           "Micro-Cred Computing & Business":
             "Micro-Credentials in Computing & Business",
-          "FLY Programme": "FLY Programme",
+          // "FLY Programme": "FLY Programme",
           "AWS Academy": "AWS Academy",
         },
       },
@@ -422,16 +428,22 @@ export default {
     },
   },
   mounted() {
-    if (window.PROGRAMME_INTERESTED) {
-      this.programme_interested = window.PROGRAMME_INTERESTED;
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      // console.log(window, window.PROGRAMME_INTERESTED);
+      if (window.PROGRAMME_INTERESTED) {
+        this.programme_interested = window.PROGRAMME_INTERESTED;
+      }
+    });
 
     this.$form = $("[name='WebToLeads4875945000004073003']");
 
+    const DEBUG = false;
     // debug
-    document.getElementById("Last_Name").value = "Test TestFormgah";
-    document.getElementById("Email").value = "testForm5884@gmail.com";
-    document.getElementById("Mobile").value = "0135135884";
+    if (DEBUG) {
+      document.getElementById("Last_Name").value = "Test TestFormgah";
+      document.getElementById("Email").value = "testForm5884@gmail.com";
+      document.getElementById("Mobile").value = "0135135884";
+    }
 
     // setup validator
     $.validator.addMethod(
@@ -561,7 +573,7 @@ export default {
       document
         .querySelector(".crmWebToEntityForm .formsubmit")
         .setAttribute("disabled", true);
-      
+
       this.$form.submit();
     },
   },

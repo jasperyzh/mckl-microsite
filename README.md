@@ -29,12 +29,13 @@ http://localhost:1234/html-social/index.html
 ## build
 
 ```
-parcel build src\html-acca\*.html --public-url="./" --out-dir="build/acca"
-parcel build src\html-digital\*.html --public-url="./" --out-dir="build/digital-programme"
-parcel build src\html-openday\*.html --public-url="./" --out-dir="build/open-day"
-parcel build src\html-scholarship\*.html --public-url="./" --out-dir="build/scholarship"
-parcel build src\html-udemy\*.html --public-url="./" --out-dir="build/short-courses"
-parcel build src\html-social\*.html --public-url="./" --out-dir="build/social-work"
+parcel build src\html-acca\*.html --no-minify --public-url="./" --out-dir="build/acca"
+parcel build src\html-digital\*.html --no-minify --public-url="./" --out-dir="build/digital-programme"
+parcel build src\html-openday\*.html --no-minify --public-url="./" --out-dir="build/open-day"
+parcel build src\html-scholarship\*.html --no-minify --public-url="./" --out-dir="build/scholarship"
+parcel build src\html-udemy\*.html --no-minify --public-url="./" --out-dir="build/short-courses"
+parcel build src\html-social\*.html --no-minify --public-url="./" --out-dir="build/social-work"
+parcel build src\html-business\*.html --no-minify --public-url="./" --out-dir="build/busincess-programme"
 ```
 
 ```

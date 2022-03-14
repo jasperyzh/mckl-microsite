@@ -1,7 +1,67 @@
 @use "../abstracts" as *;
 
-// programmes-accordion
+// custom accordion for business_programmes
 .accordion {
+    .card-header {
+        background-color: $color-blue;
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // the arrow
+            &:after {
+                display: inline-block;
+                content: "";
+                background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'  fill='%23fff' class='bi bi-caret-up' viewBox='0 0 16 16'><path d='m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z'/></svg>");
+                background-position: center;
+                width: 18px;
+                height: 18px;
+                transition: transform 0.3s ease;
+                transform: rotate(0deg);
+            }
+            &.collapsed:after {
+                transform: rotate(180deg);
+            }
+        }
+        .btn > *,
+        .btn {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin: 0;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+    .card-body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .programme_box {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1rem;
+        p {
+            margin-bottom: 0.5rem;
+        }
+        .id {
+            color: $color-blue;
+            font-size: 0.8rem;
+        }
+        .intake {
+            color: $color-blue;
+            font-size: 0.925rem;
+            font-weight: bold;
+        }
+    }
+}
+
+// programmes-accordion
+/* .accordion {
     .collapse__flip.bi.bi-caret-up-fill:before {
         transition: transform 0.3s ease;
         transform: rotate(0deg);
@@ -48,3 +108,4 @@
         }
     }
 }
+ */

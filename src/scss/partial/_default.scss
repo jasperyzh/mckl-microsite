@@ -67,6 +67,9 @@ h6,
         background-image: linear-gradient(180deg, #ffffff 33%, $color-blue 33%);
     }
 }
+.bg__yellow {
+    background-color: $color-yellow;
+}
 .bg__grey {
     background-color: $color-grey;
 }
