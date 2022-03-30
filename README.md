@@ -52,7 +52,8 @@ https://staging.fishermen-analytics.com/mckl/social-work/
 
 ## live_url
 https://mckl.edu.my/acca/
-https://mckl.edu.my/digital-programme
+https://mckl.edu.my/digital-programme/
+https://mckl.edu.my/business-programme/
 https://mckl.edu.my/open-day/
 https://mckl.edu.my/scholarship/
 https://mckl.edu.my/short-courses/

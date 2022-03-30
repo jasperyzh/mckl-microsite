@@ -80,13 +80,9 @@
         <main class="main">
 
             <!-- thank-you -->
-            <section id="thank-you" class="d-none bg__shiny py-5 text-center">
-                <h2 class="my-5 px-2">Thank you for your submission!</h2>
-                <a href="https://www.mckl.edu.my/open-day/">
-                    <img src="../img/page-social/registration_day-banner.jpg" alt="Registration Day" width="420"
-                        class="border mb-3">
-                </a>
-            </section>
+            <include src="html/section-thank-you.html" locals='{
+                "return_href": "/social-work"
+            }'></include>
 
 
             <!-- masthead -->

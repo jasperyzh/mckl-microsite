@@ -5,8 +5,9 @@
     <include src="html/head-default.html"></include>
 
     <title>Business Programme | Methodist College Kuala Lumpur</title>
-    <!-- <meta name="description"
-        content="Business programmes of MCKL">
+    <meta name="description"
+        content="Be future-ready with IR4.0 business and digital skills with MCKL's new business programmes. Programmes offered Diploma in E-Commerce, Digital Marketing and Financial Technology.">
+    <!-- 
     <meta property="og:url" content="https://www.mckl.edu.my/digital-programme/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Digital Programme | Methodist College Kuala Lumpur" />
@@ -22,7 +23,7 @@
     <link rel="stylesheet" href="../scss/style.scss">
     <style>
         .masthead__bg {
-            background: url("../img/page-business/business_banner_mobile-480.jpg") no-repeat center center;
+            background: url("../img/page-business/business_banner_mobile-480.jpg") no-repeat bottom center;
             background-color: #ccc;
             background-size: cover;
         }
@@ -33,12 +34,20 @@
                 background-image: url("../img/page-business/business_banner_desktop-1920.jpg");
             }
         }
+
+        @media (max-width: 575px) {
+            .masthead--aspect-important {
+                /* aspect-ratio: 3/4; */
+                padding-bottom: 10rem !important;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div id="site-container">
+
 
         <main class="main">
 
@@ -55,21 +64,24 @@
                             <div>
                                 <a class="navbar-logo__href" href="/business-programme">
                                     <figure class="navbar-logo__figure">
-                                        <img width="128" class="navbar-logo__img" src="../img/mckl-logo-portrait.png"
-                                            alt="MCKL Logo">
+                                        <!-- <img width="128" class="navbar-logo__img" src="../img/mckl-logo-portrait.png"
+                                            alt="MCKL Logo"> -->
+                                        <img width="260" class="navbar-logo__img"
+                                            src="../img/page-business/mckl-logo-white.svg" alt="MCKL Logo">
                                     </figure>
                                 </a>
                                 <h1 class="font-weight-bold mb-4">Launch Your Business Career in <span
                                         class="d-block">IR 4.0
                                         with MCKL</span>
                                 </h1>
-                                <p class="h4">12-weeks of industrial training for all students.
+                                <p class="h4 font-weight-normal">Visit our Scholarship Week on <span class="d-inline-block">28 Mar - 2 Apr 2022</span>!
                                 </p>
-                                <p class="h4">Scholarships and financial aid available.</p>
+                                <p class="h4 font-weight-normal">Scholarships and financial aid available.</p>
                                 <div class="my-3">
 
-                                    <a class="mx-2 btn btn-primary btn-lg btn-primary--yellow" href="#programmes_offered">Learn More</a>
-                                    <a class="mx-2 btn btn-outline-primary btn-lg" href="#registration">Enquire Now</a>
+                                    <a class="m-2 btn btn-primary btn-lg btn-primary--yellow"
+                                        href="#programmes_offered">Learn More</a>
+                                    <a class="m-2 btn btn-outline-primary btn-lg" href="#registration">Enquire Now</a>
                                 </div>
 
                             </div>
@@ -112,11 +124,17 @@
                     </div>
                     <div class="row row-cols-1 row-cols-lg-3 my-5">
                         <div class="col px-4 px-lg-5">
+                            <figure>
+                                <img width="64" src="../img/page-business/icon1-future-ready-skills.svg" alt="">
+                            </figure>
                             <h4 class="h5 color__yellow">Gain Future-ready Skills & Knowledge</h4>
                             <p>Exposure to industry-relevant skills such as Search Engine Optimisation (SEO), Social
                                 Media Content Marketing, International Business, Cybersecurity and Blockchain.</p>
                         </div>
                         <div class="col px-4 px-lg-5">
+                            <figure>
+                                <img width="64" src="../img/page-business/icon2-international-degree.svg" alt="">
+                            </figure>
                             <h4 class="h5 color__yellow">Progress into an International Degree
                             </h4>
                             <p>Opportunity to pursue a bachelor's degree at our partner universities abroad, such as
@@ -124,6 +142,9 @@
                             </p>
                         </div>
                         <div class="col px-4 px-lg-5">
+                            <figure>
+                                <img width="64" src="../img/page-business/icon3-industrial-training.svg" alt="">
+                            </figure>
                             <h4 class="h5 color__yellow">Be Job-Ready with Industrial Training</h4>
                             <p>12-week industrial training in the final semester with industry experts provides
                                 real-life working experience and a seamless transition to employment.</p>
@@ -135,7 +156,7 @@
 
             <!-- about -->
             <section id="programmes_offered">
-                <div class="container-fluid text-center py-5 bg__yellow">
+                <div class="container-fluid text-center py-4 bg__yellow">
                     <div class="row text-center">
                         <div class="col">
                             <h2 class="">Programmes Offered</h2>
@@ -224,14 +245,16 @@
                                 <div class="col-lg-6">
                                     <figure class="object-fit">
                                         <img src="../img/page-business/form-img.jpg"
-                                            alt="Students having a field day on MCKL field.">
+                                            alt="Students having a field day on MCKL field." style="
+                                            object-position: 23%;">
                                     </figure>
                                 </div>
                                 <div class="col-lg-6 p-4 py-5">
                                     <h2 class="h4">Enquire for personal education advice</h2>
                                     <p>Explore the right IR 4.0 oriented programmes today!</p>
                                     <ul style="font-size: 90%">
-                                        <li>Top Up 1 Year to complete your degree in Australia*</li>
+                                        <li>Top Up 1-2 Years to complete your degree in UK &
+                                            Australia*</li>
                                         <li>100% MCKL-Industry Scholarship*</li>
                                         <li>50% Tuition Fee Waiver*</li>
                                         <li>Scholarships & Financial Aid*</li>
@@ -257,6 +280,9 @@
         <include src="html/footer.html" locals='{
             "footer__class": ""
         }'></include>
+
+        <!-- <aside id="FloatPopup"></aside> -->
+
 
     </div> <!-- site-container end -->
 

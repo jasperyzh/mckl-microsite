@@ -69,5 +69,7 @@ if (document.getElementById("tns_testimonial")) {
 
 // thank-you message
 const URL = window.location.href;
-const section_thank_you = document.getElementById("thank-you");
-if (URL.includes("thank-you")) section_thank_you.classList.remove("d-none");
+if (URL.includes("thank-you")) {
+    const section_thank_you = document.getElementById("thank-you");
+    section_thank_you.classList.remove("d-none");
+}

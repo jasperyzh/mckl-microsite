@@ -1,19 +1,20 @@
 // leadform
 window.SHEET_NAME = "digital";
+window.PATH_NAME = "digital-programme";
 window.PROGRAMME_INTERESTED = {
     /* "Pre-U / Foundation": {
         CAL: "Cambridge A Level",
         AUSMAT: "Australian Matriculation",
     }, */
-    "Diploma & Degree": {
+    "Diploma": {
         // ADTP: "American Degree Transfer Program",
         // DECE: "Diploma in Early Childhood Education",
         // DSW: "Diploma in Social Work - NEW",
         DCS: "Diploma in Computer Science - NEW",
         DIT: "Diploma in Information Technology - NEW",
-        DEC: "Diploma in E-Commerce - NEW",
-        DDM: "Diploma in Digital Marketing - NEW",
-        DFT: "Diploma in Financial Technology - NEW",
+        // DEC: "Diploma in E-Commerce - NEW",
+        // DDM: "Diploma in Digital Marketing - NEW",
+        // DFT: "Diploma in Financial Technology - NEW",
     },
     /* "Professional Accounting": {
         ACCAFIA: "ACCA Foundation in Accountancy",
@@ -27,12 +28,14 @@ window.PROGRAMME_INTERESTED = {
         // MCSW: "Micro-Credentials in Social Work",
         MCCS: "Micro-credentials in Computer Science",
         MCIT: "Micro-credentials in Information Technology",
-        MCEC: "Micro-credentials in E-Commerce",
-        MCDM: "Micro-credentials in Digital Marketing",
+        // MCEC: "Micro-credentials in E-Commerce",
+        // MCDM: "Micro-credentials in Digital Marketing",
         // EMLPE: "Educational Management and Leadership for Private Education",
         // TLERSCW: "Teaching &amp; Learning and Education Related Short Courses &amp; Workshop",
     },
 };
+
+
 
 // import
 import "./_main-default.js";

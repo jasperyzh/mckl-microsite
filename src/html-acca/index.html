@@ -40,6 +40,7 @@
 
     <div id="site-container">
 
+
         <header class="header bg__blue fixed-top shadow">
             <div class="container">
                 <nav
@@ -80,37 +81,32 @@
         <main class="main">
 
             <!-- thank-you -->
-            <section id="thank-you" class="d-none bg__shiny py-5 text-center">
-                <h2 class="h1 my-5 py-5 px-2">Thank you for your submission!</h2>
-                <a href="https://www.mckl.edu.my/open-day/">
-                    <img src="../img/page-acca/registration_day-banner.jpg" alt="Registration Day" width="420"
-                        class="border mb-3">
-                </a>
-            </section>
+            <include src="html/section-thank-you.html" locals='{
+                "return_href": "/acca"
+            }'></include>
 
             <!-- masthead -->
             <section id="masthead" class="masthead masthead--aspect-important masthead__bg py-5">
-                <div class="container h-100">
+                <div class="container h-100 text-center text-xl-left">
                     <div class="row h-100 align-items-center">
                         <div class="col-1 d-none d-lg-block"></div>
                         <div class="col-xl-7">
-                            <div class="mt-5 py-2 px-4" style="background-color: rgba(255,255,255,.5);">
+                            <div class="mt-5 py-2 px-4" style="background-color: rgba(255,255,255,.6);">
                                 <h1 class="font-weight-bold">Stand Above the Rest with ACCA
                                 </h1>
-                                <p class="h2 mb-4">Visit our Open Day!
+                                <p class="h2 mb-4">Visit our Scholarship Week!
+                                    <span class="d-block">28 Mar – 2 Apr 2022</span>
                                 </p>
                                 <p class="h4">Personalised counselling and scholarship available.</p>
-                                <p class="h5">8 & 9 April 2022 | 9am - 5pm</p>
-                                <div class="btn btn-primary btn-lg btn-primary--yellow my-3"
-                                    style="pointer-events: none;">
-                                    Book Your
-                                    Appointment Now</div>
-                                <div class="circle circle-top d-flex">
-                                    <figure class="m-0"><img width="120" src="../img/page-acca/icon-header-acca.png"
-                                            alt="">
+                                <!-- <p class="h5">We are open from Mon - Sat, 9am - 5pm.</p> -->
+                                <a href="#registration" class="btn btn-primary btn-lg btn-primary--yellow my-3">
+                                    Enquire Now</a>
+                                <div class="circle circle-top d-flex justify-content-center justify-content-xl-start">
+                                    <figure class="my-3 mx-4 mx-xl-0 mr-xl-4 shadow-sm"><img width="120"
+                                            src="../img/page-acca/icon-acca.jpg" alt="">
                                     </figure>
-                                    <figure class="m-0"><img width="120" src="../img/page-acca/icon-header-acca_cbe.png"
-                                            alt="">
+                                    <figure class="my-3 mx-4 mx-xl-0 mr-xl-4 shadow-sm"><img width="120"
+                                            src="../img/page-acca/icon-acca_cbe.jpg" alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -148,38 +144,48 @@
                         </div>
                     </div>
                     <div class="about__record row row-cols-1 justify-content-center text-center my-3">
-                        <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure class="d-inline-flex align-items-center" style="aspect-ratio: 1/1">
-                                <img width="140" src="../img/page-acca/acca-icon1.svg" alt="">
+                        <div class="col-6 col-md-3 mb-2 mb-md-4 d-flex flex-column">
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="120" src="../img/page-acca/acca-icon1.svg" alt="">
                             </figure>
-                            <h3 class="h6">International Recognition:<br>The Platinum Status</h3>
+                            <h3 class="h6 d-flex flex-column justify-content-center" style="min-height: 5ch">
+                                International Recognition: <span class="d-inline-block">The Platinum
+                                    Status</span></h3>
                             <p class="text-muted">MCKL is one of the Top 3 Institutions in Kuala Lumpur with the
-                                Platinum Status Approved Learning Partner (ALP) of ACCA, the most prestigious level of
+                                Platinum Status Approved Learning Partner (ALP) of ACCA, the most prestigious level
+                                of
                                 the ALP programme.</p>
                         </div>
-                        <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure class="d-inline-block" style="aspect-ratio: 1/1">
-                                <img width="140" src="../img/page-acca/acca-icon2.svg" alt="">
+                        <div class="col-6 col-md-3 mb-2 mb-md-4 d-flex flex-column">
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="92" src="../img/page-acca/acca-icon2.svg" alt="">
                             </figure>
-                            <h3 class="h6">Great Students Experience</h3>
+                            <h3 class="h6 d-flex flex-column justify-content-center" style="min-height: 5ch">Great
+                                Students Experience</h3>
                             <p class="text-muted">Personalised classes with two-way interaction between lecturer and
                                 students, allowing students to learn and collaborate in an active learning environment.
                             </p>
                         </div>
-                        <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure class="d-inline-block" style="aspect-ratio: 1/1">
-                                <img width="140" src="../img/page-acca/acca-icon3.svg" alt="">
+                        <div class="col-6 col-md-3 mb-2 mb-md-4 d-flex flex-column">
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="92" src="../img/page-acca/acca-icon3.svg" alt="">
                             </figure>
-                            <h3 class="h6">Learning Opportunity<br>with Experts</h3>
+                            <h3 class="h6 d-flex flex-column justify-content-center" style="min-height: 5ch">Learning
+                                Opportunity with Experts</h3>
                             <p class="text-muted">Opportunity to expose and obtain relevant finance and accounting
                                 industry
                                 experience from multinational company experts.</p>
                         </div>
-                        <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure class="d-inline-block" style="aspect-ratio: 1/1">
-                                <img width="140" src="../img/page-acca/acca-icon4.svg" alt="">
+                        <div class="col-6 col-md-3 mb-2 mb-md-4 d-flex flex-column">
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="92" src="../img/page-acca/acca-icon4.svg" alt="">
                             </figure>
-                            <h3 class="h6">High Pass Rates</h3>
+                            <h3 class="h6 d-flex flex-column justify-content-center" style="min-height: 5ch">High Pass
+                                Rates</h3>
                             <p class="text-muted">MCKL delivers high-quality teaching to students with proven record of
                                 sustaining global pass rates.</p>
                         </div>
@@ -190,7 +196,7 @@
 
             <!-- programme -->
             <section id="programme_listing" class="py-5"
-                style="background: url('../img/page-acca/64805236_l-programme.jpg') no-repeat top; background-size: cover;">
+                style="background: url('../img/page-acca/bg-programme.jpg') no-repeat top; background-size: cover;">
                 <div class=" container-fluid">
                     <div class="row justify-content-center text-center mb-4">
                         <div class="col-md-10">
@@ -243,6 +249,10 @@
                 </div>
             </section>
 
+            <section id="news_event" class="my-5 pt-3">
+                <div id="AccaNews"></div>
+            </section>
+
             <!-- testimonial -->
             <section id="testimonial">
                 <div class="container-lg my-5">
@@ -261,25 +271,22 @@
             </section>
 
             <!-- About -->
-            <section id="about__mckl" class="about__mckl text-center"
-                style="background-image: url(../img/page-acca/126486580_l-mckl_about.jpg)">
+            <section id="about__mckl" class="about__mckl text-center">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8">
 
                             <h2 class="text-uppercase mb-4">About MCKL</h2>
+
                             <h3 class="h5 mb-3">Welcome to
                                 <span class="d-inline-block">Methodist College Kuala Lumpur</span>
                                 <br>An Institution where values and tradition meet excellence in education!
                             </h3>
-                            <p>For over three decades, Methodist College Kuala Lumpur (MCKL) has been providing quality,
-                                holistic
-                                education in the best of Methodist tradition. MCKL fully embraces the challenges and
-                                opportunities of
-                                educating and preparing students for further education, professional development, and
-                                job
-                                careers in the
-                                new IR 4.0 environment.</p>
+                            <p>Having been in the education industry for over 39 years, Methodist College Kuala Lumpur
+                                (MCKL) has an excellent track record of providing quality, holistic education in the
+                                best of Methodist tradition. MCKL fully embraces the challenges and opportunities of
+                                educating and preparing students for further education, professional development and job
+                                careers in the new IR 4.0 environment.</p>
                         </div>
                     </div>
                 </div>
@@ -288,40 +295,37 @@
             <!-- scholarships -->
             <section id="scholarships" class="scholarships bg__grey py-5">
                 <div class="container">
-                    <div class="row row-cols-1 justify-content-center text-center my-3">
+                    <div class="row row-cols-1 justify-content-center text-center">
                         <h3 class="h4 my-3">Over 39 years of Proven Track Record
                         </h3>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-acca/icon-globally.png" alt=""></figure>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-6 col-md-3 mb-2 mb-md-4">
+                            <figure class="mb-0"> <img src="../img/page-business/business-icon-1.png" alt=""></figure>
                             <h3 class="h6">Globally Recognised</h3>
                             <p class="text-muted">Providing renowned professional pre-university and tertiary
                                 programmes.
                             </p>
                         </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-acca/icon-internship.png" alt=""></figure>
-                            <h3 class="h6">Internship & Career Opportunities</h3>
-                            <p class="text-muted">Strong connection with industry partners to provide real-life working
-                                experience and seamless transition to employment.</p>
-                        </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-acca/icon-platinum.png" alt=""></figure>
+                        <div class="col-6 col-md-3 mb-2 mb-md-4">
+                            <figure class="mb-0"> <img src="../img/page-business/business-icon-2.png" alt=""></figure>
                             <h3 class="h6">Industry Revolution 4.0</h3>
-                            <p class="text-muted">Operations & learning system in line with the IR 4.0 environment.</p>
+                            <p class="text-muted">Operations & learning system in line with the IR 4.0 environment.
+                            </p>
                         </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-acca/icon-microsoft.png" alt=""></figure>
+                        <div class="col-6 col-md-3 mb-2 mb-md-4">
+                            <figure class="mb-0"> <img src="../img/page-business/business-icon-3.png" alt=""></figure>
                             <h3 class="h6">Microsoft Recognition</h3>
                             <p class="text-muted">Providing flexibility with 100% blended learning via Microsoft cloud
-                                learning
-                                system.</p>
+                                learning system.
+                            </p>
                         </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-acca/icon-mckl_dna.png" alt=""></figure>
+                        <div class="col-6 col-md-3 mb-2 mb-md-4">
+                            <figure class="mb-0"> <img src="../img/page-business/business-icon-4.png" alt=""></figure>
                             <h3 class="h6">MCKL DNA</h3>
                             <p class="text-muted">Nurturing students with Character Formation and Service Learning
-                                programmes
-                                throughout their studies.</p>
+                                programmes throughout their studies.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -366,6 +370,8 @@
         <include src="html/footer.html" locals='{
             "footer__class": ""
         }'></include>
+
+        <!-- <aside id="FloatPopup"></aside> -->
 
     </div> <!-- site-container end -->
 

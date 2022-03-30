@@ -1,5 +1,6 @@
 // leadform - social-workw
 window.SHEET_NAME = "dsw";
+window.PATH_NAME = "social-work";
 window.PROGRAMME_INTERESTED = {
     /* "Pre-U / Foundation": {
         CAL: "Cambridge A Level",

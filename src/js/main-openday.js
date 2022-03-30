@@ -1,5 +1,6 @@
 // leadform
 window.SHEET_NAME = "openday";
+window.PATH_NAME = "open-day";
 // window.PROGRAMME_INTERESTED = {
 //     "Pre-U / Foundation": {
 //         CAL: "Cambridge A Level",
@@ -37,3 +38,10 @@ window.SHEET_NAME = "openday";
 // import
 import "./_main-default.js";
 import "./_vue-leadform.js";
+
+
+import Vue from 'vue';
+import Webinar from './vue/WebinarApr2022';
+if (document.getElementById("Webinar")) {
+    new Vue({ render: createElement => createElement(Webinar) }).$mount('#Webinar');
+}

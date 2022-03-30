@@ -10,3 +10,9 @@ import ZohoWebform from './vue/ZohoWebform';
 if (document.getElementById("ZohoWebform")) {
     new Vue({ render: createElement => createElement(ZohoWebform) }).$mount('#ZohoWebform');
 }
+
+
+import FloatPopup from './vue/FloatPopup';
+if (document.getElementById("FloatPopup")) {
+    new Vue({ render: createElement => createElement(FloatPopup) }).$mount('#FloatPopup');
+}

@@ -3,14 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta HTTP-EQUIV="content-type" CONTENT="text/html;charset=UTF-8" />
     <form
+      id="zoho-webform"
       action="https://crm.zoho.com/crm/WebToLeadForm"
       name="WebToLeads4875945000004073003"
       method="POST"
       accept-charset="UTF-8"
       @submit.prevent="prep_zoho_value()"
     >
-      <!-- checkMandatory4875945000004073003(); -->
-      <!-- onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4875945000004073003()' -->
       <input
         type="text"
         class="d-none"
@@ -29,7 +28,7 @@
         type="text"
         class="d-none"
         name="returnURL"
-        value="https://mckl.edu.my"
+        :value="`https://mckl.edu.my/${path_name}/thank-you.html`"
       />
       <!-- Do not remove this code. -->
 
@@ -48,13 +47,13 @@
           </option>
 
           <optgroup
-            :label="group_id"
-            v-for="(group, group_id) in get_programme_interested"
-            :key="group_id"
+            v-for="(group, index) in get_programme_interested"
+            :label="index"
+            :key="index"
           >
             <option
               :value="prog_value"
-              v-for="(prog, prog_value) in group"
+              v-for="(prog, prog_value) in get_programme_interested[index]"
               :key="prog_value"
             >
               {{ prog }}
@@ -66,11 +65,16 @@
 
       <div class="bg__darkgrey my-4 px-3 py-4 rounded">
         <p class="mb-2"><b>I'm interested in:</b></p>
+        <!-- microsite_interest:
+          name="LEADCF10"
+          Personalised counselling with Senior Academicians
+          Scholarships
+        -->
         <div class="form-check">
           <input
             type="checkbox"
+            name="LEADCF10"
             value="Personalised counselling with Senior Academicians"
-            name="check_counselling"
             id="check_counselling"
             class="form-check-input"
           />
@@ -81,8 +85,8 @@
         <div class="form-check">
           <input
             type="checkbox"
+            name="LEADCF10"
             value="Scholarships"
-            name="check_scholarship"
             id="check_scholarship"
             class="form-check-input"
           />
@@ -144,184 +148,125 @@
           />
         </div>
       </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF7">Preparatory Programmes</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF7" name="LEADCF7">
-            <option value="-None-">-None-</option>
-            <option value="PREPCAL (MAY)">PREPCAL (MAY)</option>
-            <option value="PREPAUSMAT (MAY)">PREPAUSMAT (MAY)</option>
-            <option value="FLY Bootcamp">FLY Bootcamp</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF20">Pre-University</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF20" name="LEADCF20">
-            <option value="-None-">-None-</option>
-            <option value="Cambridge A Level">Cambridge A Level</option>
-            <option value="Cambridge A Level (German Pathway)">
-              Cambridge A Level (German Pathway)
-            </option>
-            <option value="AUSMAT">AUSMAT</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF19">Diploma/Degree</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF19" name="LEADCF19">
-            <option value="-None-">-None-</option>
-            <option value="ADTP">ADTP</option>
-            <option value="DECE (PT)">DECE (PT)</option>
-            <option value="DECE (FT)">DECE (FT)</option>
-            <option value="DSW (PT)">DSW (PT)</option>
-            <option value="DSW (FT)">DSW (FT)</option>
-            <option value="DIFT">DIFT</option>
-            <option value="DIT">DIT</option>
-            <option value="DCS">DCS</option>
-            <option value="DEC">DEC</option>
-            <option value="DDM">DDM</option>
-            <option value="FINTECH">FINTECH</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF21">Professional Accounting Programme</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF21" name="LEADCF21">
-            <option value="-None-">-None-</option>
-            <option value="ACCA (FT)">ACCA (FT)</option>
-            <option value="ACCA (PT)">ACCA (PT)</option>
-            <option value="ACCA FIA">ACCA FIA</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF22">Professional Development Programme</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF22" name="LEADCF22">
-            <option value="-None-">-None-</option>
-            <option value="CICTL">CICTL</option>
-            <option value="CIDTL">CIDTL</option>
-            <option value="International Certification of Digital Literacy">
-              International Certification of Digital Literacy
-            </option>
-            <option value="Micro-Credentials in Social Work">
-              Micro-Credentials in Social Work
-            </option>
-            <option value="Micro-Credentials in Early Childhood Education">
-              Micro-Credentials in Early Childhood Education
-            </option>
-            <option value="Micro-credentials in Computer Science">
-              Micro-credentials in Computer Science
-            </option>
-            <option value="Micro-credentials in Information Technology">
-              Micro-credentials in Information Technology
-            </option>
-            <option value="Micro-credentials in E-Commerce">
-              Micro-credentials in E-Commerce
-            </option>
-            <option value="Micro-credentials in Digital Marketing">
-              Micro-credentials in Digital Marketing
-            </option>
-            <option
-              value="Educational Management and Leadership for Private Education"
-            >
-              Educational Management and Leadership for Private Education
-            </option>
-            <option
-              value="Teaching & Learning and Education Related Short Courses & Workshop"
-            >
-              Teaching & Learning and Education Related Short Courses & Workshop
-            </option>
-            <option value="Micro-Cred Computing & Business">
-              Micro-Cred Computing & Business
-            </option>
-            <option value="FLY Programme">FLY Programme</option>
-            <option value="AWS Academy">AWS Academy</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab"><label for="LEADCF11">Remarks</label></div>
-        <div class="zcwf_col_fld">
-          <input
-            type="text"
-            id="LEADCF11"
-            name="LEADCF11"
-            maxlength="255"
-            value="-"
-          />
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab"><label for="LEADCF23">Campus</label></div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF23" name="LEADCF23">
-            <option value="-None-">-None-</option>
-            <option selected value="KL Campus">KL Campus</option>
-            <option value="Penang Pykett Campus">Penang Pykett Campus</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF1">Lead Source.</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select class="zcwf_col_fld_slt" id="LEADCF1" name="LEADCF1">
-            <option selected value="Microsite (MCKL Website)">
-              Microsite (MCKL Website)
-            </option>
-          </select>
-        </div>
-      </div>
+      <!-- zoho_custom_field - HIDDEN -->
+      <select class="d-none" id="preparatory_programmes" name="LEADCF7">
+        <option value="">-None-</option>
+        <option value="PREPCAL (MAY)">PREPCAL (MAY)</option>
+        <option value="PREPAUSMAT (MAY)">PREPAUSMAT (MAY)</option>
+        <option value="FLY Bootcamp">FLY Bootcamp</option>
+      </select>
+      <select class="d-none" id="pre_university_programmes" name="LEADCF20">
+        <option value="">-None-</option>
+        <option value="Cambridge A Level">Cambridge A Level</option>
+        <option value="Cambridge A Level (German Pathway)">
+          Cambridge A Level (German Pathway)
+        </option>
+        <option value="AUSMAT">AUSMAT</option>
+      </select>
+      <select class="d-none" id="diploma_degree" name="LEADCF19">
+        <option value="">-None-</option>
+        <option value="ADTP">ADTP</option>
+        <option value="DECE (PT)">DECE (PT)</option>
+        <option value="DECE (FT)">DECE (FT)</option>
+        <option value="DSW (PT)">DSW (PT)</option>
+        <option value="DSW (FT)">DSW (FT)</option>
+        <option value="DIFT">DIFT</option>
+        <option value="DIT">DIT</option>
+        <option value="DCS">DCS</option>
+        <option value="DEC">DEC</option>
+        <option value="DDM">DDM</option>
+      </select>
+      <select
+        class="d-none"
+        id="professional_accounting_programme"
+        name="LEADCF21"
+      >
+        <option value="">-None-</option>
+        <option value="ACCA (FT)">ACCA (FT)</option>
+        <option value="ACCA (PT)">ACCA (PT)</option>
+        <option value="ACCA FIA">ACCA FIA</option>
+      </select>
+      <select
+        class="d-none"
+        id="professional_development_programme"
+        name="LEADCF22"
+      >
+        <option value="">-None-</option>
+        <option value="CICTL">CICTL</option>
+        <option value="CIDTL">CIDTL</option>
+        <option value="International Certification of Digital Literacy">
+          International Certification of Digital Literacy
+        </option>
+        <option value="Micro-Credentials in Social Work">
+          Micro-Credentials in Social Work
+        </option>
+        <option value="Micro-Credentials in Early Childhood Education">
+          Micro-Credentials in Early Childhood Education
+        </option>
+        <option value="Micro-credentials in Computer Science">
+          Micro-credentials in Computer Science
+        </option>
+        <option value="Micro-credentials in Information Technology">
+          Micro-credentials in Information Technology
+        </option>
+        <option value="Micro-credentials in E-Commerce">
+          Micro-credentials in E-Commerce
+        </option>
+        <option value="Micro-credentials in Digital Marketing">
+          Micro-credentials in Digital Marketing
+        </option>
+        <option
+          value="Educational Management and Leadership for Private Education"
+        >
+          Educational Management and Leadership for Private Education
+        </option>
+        <option
+          value="Teaching &amp; Learning and Education Related Short Courses &amp; Workshop"
+        >
+          Teaching &amp; Learning and Education Related Short Courses &amp;
+          Workshop
+        </option>
+        <option value="Micro-Cred Computing &amp; Business">
+          Micro-Cred Computing &amp; Business
+        </option>
+        <option value="AWS Academy">AWS Academy</option>
+        <option value="FLY Programme">FLY Programme</option>
+      </select>
+      <input id="remarks" type="hidden" name="LEADCF11" value="" />
+      <input
+        id="latest_academic_qualification"
+        type="hidden"
+        name="LEADCF5"
+        value=""
+      />
+      <input
+        id="lead_source"
+        type="hidden"
+        name="LEADCF1"
+        value="Microsite (MCKL Website)"
+      />
+      <!-- campus:
+        KL Campus
+        Penang Pykett Campus
+       -->
+      <input id="campus" type="hidden" name="LEADCF23" value="KL Campus" />
+      <!-- microsites_source:
+        open-day
+        acca
+        business-programme
+        scholarship
+        social-work
+        short-courses
+        digital-programme
+       -->
+      <input
+        id="microsite_source"
+        type="hidden"
+        name="LEADCF9"
+        :value="`${path_name}`"
+      />
 
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF24">Interested In</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <select
-            class="zcwf_col_fld_slt"
-            id="LEADCF24"
-            name="LEADCF24"
-            multiple
-          >
-            <option value="Personalised counselling with Senior Academicians">
-              Personalised counselling with Senior Academicians
-            </option>
-            <option value="Scholarships">Scholarships</option>
-          </select>
-        </div>
-      </div>
-      <div class="zcwf_row zoho__d-none d-none">
-        <div class="zcwf_col_lab">
-          <label for="LEADCF5">Latest Academic Qualification</label>
-        </div>
-        <div class="zcwf_col_fld">
-          <input
-            type="text"
-            id="LEADCF5"
-            name="LEADCF5"
-            maxlength="255"
-            value=""
-          />
-        </div>
-      </div>
-
+      <!-- agreements -->
       <div class="form-check">
         <input
           type="checkbox"
@@ -330,7 +275,6 @@
           name="privacyTool"
           autocomplete="off"
         />
-        <!-- @click="disableErr4875945000004073003()" -->
         <label class="form-check-label" for="privacyTool4875945000004073003">
           I have read the College's
           <a
@@ -356,7 +300,6 @@
             value="Submit"
             title="Submit"
           />
-          <!-- <input type='reset' class='btn btn-secondary' name='reset' value='Reset' title='Reset'> -->
         </div>
       </div>
     </form>
@@ -370,6 +313,7 @@ export default {
   data() {
     return {
       $form: "",
+      path_name: "",
       programme_interested: {
         "Preparatory Programmes": {
           "PREPCAL (MAY)": "PREPCAL (MAY)",
@@ -416,7 +360,6 @@ export default {
             "Teaching & Learning and Education Related Short Courses & Workshop",
           "Micro-Cred Computing & Business":
             "Micro-Credentials in Computing & Business",
-          // "FLY Programme": "FLY Programme",
           "AWS Academy": "AWS Academy",
         },
       },
@@ -429,15 +372,18 @@ export default {
   },
   mounted() {
     document.addEventListener("DOMContentLoaded", () => {
-      // console.log(window, window.PROGRAMME_INTERESTED);
       if (window.PROGRAMME_INTERESTED) {
         this.programme_interested = window.PROGRAMME_INTERESTED;
       }
+      if (window.PATH_NAME) {
+        this.path_name = window.PATH_NAME;
+      }
     });
 
-    this.$form = $("[name='WebToLeads4875945000004073003']");
+    this.$form = $("#zoho-webform");
 
     const DEBUG = false;
+
     // debug
     if (DEBUG) {
       document.getElementById("Last_Name").value = "Test TestFormgah";
@@ -453,7 +399,6 @@ export default {
       },
       "Letters only please"
     );
-
     $.validator.addMethod(
       "emailExtraCheck",
       function (value, element) {
@@ -466,7 +411,6 @@ export default {
       },
       "Please enter a valid email address"
     );
-
     this.$form.validate({
       debug: false,
       rules: {
@@ -513,40 +457,18 @@ export default {
     });
   },
   methods: {
-    debug_display_form_data() {
-      var form = document.forms["WebToLeads4875945000004073003"];
-      var data = new FormData(form);
-      for (const [name, value] of data) {
-        console.log(name, value);
-      }
-    },
-    // this field could be varies across different microsites
-    set_interested_in() {
-      // MANUAL - get checkboxes
-      let checkbox1 = document.querySelector('[name="check_counselling"]');
-      let checkbox2 = document.querySelector('[name="check_scholarship"]');
-
-      let custom_checkboxes = [
-        checkbox1.checked ? checkbox1.value : "",
-        checkbox2.checked ? checkbox2.value : "",
-      ];
-
-      // set value for "interested_in"
-      const select = document.querySelector("[name='LEADCF24']");
-      for (const o of select.options) {
-        o.selected = custom_checkboxes.includes(o.value);
-      }
-    },
     set_programme_interested() {
       // get all the options to be selected
       let get_options = document.querySelectorAll(
-        `#LEADCF20 option, #LEADCF19 option, #LEADCF21 option, #LEADCF22 option`
+        `#preparatory_programmes option, #pre_university_programmes option, #diploma_degree option, #professional_accounting_programme option, #professional_development_programme option`
       );
+      console.log(get_options);
 
       let get_user_selected_programme = document.getElementById(
         "programme_interested"
       ).value;
-      console.log("get_user_selected_programme", get_user_selected_programme);
+
+      // console.log("get_user_selected_programme", get_user_selected_programme);
 
       // cross-check user-selected with zoho-options; select option
       get_options.forEach((option) => {
@@ -556,15 +478,17 @@ export default {
         }
       });
     },
-    prep_zoho_value() {
-      // debugs
-      // console.log("prep_zoho_value");
-      // this.debug_display_form_data();
-      // console.log("form validate?", this.$form.valid());
 
+    prep_zoho_value() {
       // reset fields
-      this.set_interested_in();
       this.set_programme_interested();
+
+      // debug
+      let form = document.getElementById("zoho-webform");
+      var data = new FormData(form);
+      for (const [name, value] of data) {
+        console.log(name, value);
+      }
 
       // validate fields
       if (!this.$form.valid()) return;

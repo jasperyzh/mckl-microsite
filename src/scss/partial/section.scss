@@ -3,14 +3,14 @@
 // button
 .btn-primary {
     background-color: $color-yellow;
+    border-color: $color-yellow;
     color: #fff;
-    border: 0;
     border-radius: 0;
     font-weight: 600;
-    text-transform: capitalize;
     &:hover,
     &:active {
         background-color: $color-yellow--hover;
+        border-color: $color-yellow--hover;
     }
 
     &--red {
@@ -27,7 +27,6 @@
 }
 .btn-lg {
     padding: 0.625rem 2.5rem;
-
 }
 
 .btn-outline-primary {
@@ -40,6 +39,14 @@
         border-color: $color-yellow;
         background-color: $color-yellow;
     }
+}
+
+.btn-secondary {
+    background-color: $color-blue;
+    border-color: $color-blue;
+    color: #fff;
+    border-radius: 0;
+    font-weight: 600;
 }
 
 .btn__cta {
