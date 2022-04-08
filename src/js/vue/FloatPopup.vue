@@ -23,7 +23,7 @@
           </button>
         </div>
         <div class="modal-body p-0 border-0">
-          <figure>
+          <figure class="text-center">
             <a href="https://mckl.edu.my/open-day" target="_blank">
               <img
                 class="floatpop__shadow"
@@ -48,6 +48,7 @@ export default {
       $("#floatpop").modal({
         show: true,
         backdrop: false,
+        focus: false,
         // backdrop: 'static',
       });
     });

@@ -182,7 +182,7 @@ export default {
           all_speakers: [
             "host_joshua_johnson",
             "dr_grace_chua",
-            "veneezha_muniandi",
+            "vaneezha_muniandi",
           ],
           content: [
             {
@@ -192,10 +192,10 @@ export default {
               speaker: ["dr_grace_chua"],
             },
             {
-              time: "2.45am to 3.25pm",
+              time: "2.45pm to 3.25pm",
               title: "Dynamic Communication in Social Work",
               desc: "Communication holds a key role in the Social Work field. Get a glimpse of the programme with a quick preview of the social work module.",
-              speaker: ["veneezha_muniandi"],
+              speaker: ["vaneezha_muniandi"],
             },
           ],
         },
@@ -275,7 +275,7 @@ export default {
         },
         ryan_p_abraham: {
           speaker_name: "Mr Ryan P.Abraham",
-          position: "Lecturer, ACCA",
+          position: "Lecturer, ACCA FIA",
           profile_picture: SpeakerImage["5-Ryan"],
         },
         dr_gerard_boey: {
@@ -288,8 +288,8 @@ export default {
           position: "Head of Department, Early Childhood Education",
           profile_picture: SpeakerImage["7-Dr Grace"],
         },
-        veneezha_muniandi: {
-          speaker_name: "Ms Veneezha Muniandi",
+        vaneezha_muniandi: {
+          speaker_name: "Ms Vaneezha Muniandi",
           position: "Lecturer, Social Work",
           profile_picture: SpeakerImage["8-Vaneezha"],
         },

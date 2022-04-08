@@ -44,7 +44,7 @@
       <div class="card border-0" style="max-width: 20rem">
         <img
           class="card-img rounded-0"
-          src="../../img/page-acca/news2.jpg"
+          src="../../img/page-acca/20220321 ACCA press img-02.jpg"
           alt="Card image cap"
         />
         <div class="card-body px-1 pb-0">
@@ -55,12 +55,13 @@
         </div>
         <div class="card-footer bg-transparent border-0 px-1">
           <a
-            href="#"
+            href="https://bernama.com/en/press/news.php?id=2064303"
+            target="_blank"
             class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#news-3"
-            >View Image</a
+            >Read more</a
           >
+          <!-- data-toggle="modal"
+            data-target="#news-3" -->
         </div>
       </div>
     </div>

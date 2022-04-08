@@ -24,13 +24,27 @@
     <link rel="stylesheet" href="../scss/style.scss">
     <style>
         .masthead__bg {
-            background: url("../img/page-social/banner-mobile.jpg") no-repeat top;
+            background: url("../img/page-social/banner-mobile-140117930_l.jpg") no-repeat top;
             background-size: cover;
+            position: relative;
         }
 
-        @media (min-width: 1024px) {
+        @media (max-width: 991px) {
+            .masthead__bg:before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, .3);
+                position: absolute;
+                inset: 0 0 0 0;
+                z-index: 0;
+            }
+        }
+
+        @media (min-width: 991px) {
             .masthead__bg {
-                background-image: url("../img/page-social/banner.jpg");
+                background-image: url("../img/page-social/banner-desktop-140117930_l.jpg");
             }
         }
     </style>
@@ -88,24 +102,18 @@
             <!-- masthead -->
             <section id="masthead" class="masthead masthead--aspect-important masthead__bg py-5">
                 <div class="container h-100">
-                    <div class="row h-100 align-items-center">
+                    <div class="row h-100 align-items-center text-center text-lg-left">
                         <div class="col-1 d-none d-lg-block"></div>
-                        <div class="col-xl-6">
+                        <div class="col-lg-6 col-xl-5">
                             <div class="mt-5">
-                                <h1 class="display-4 font-weight-bold">Methodist College
-                                    <br>Kuala Lumpur
+                                <h1 class="font-weight-bold">Make a Positive Impact Through Social Work
                                 </h1>
-                                <p class="h2 mb-4">Internationally Recognised and
-                                    Pioneer Provider of <span class="d-inline-block">Diploma in Social Work</span> in
-                                    Malaysia
+                                <p class="h2 mt-4">Visit our Open Day <span class="d-block mb-3">8 - 9 Apr
+                                        2022</span>
                                 </p>
-                                <p class="h4">On-campus personalised counselling
-                                    available.</p>
-                                <p class="h5">We are open from Mon - Sat, 9am - 5pm</p>
-                                <div class="btn btn-primary btn-lg btn-primary--yellow my-3"
-                                    style="pointer-events: none;">
-                                    Book Your
-                                    Appointment Now</div>
+                                <p class="h4">Join MCKL, the Pioneer Provider of Diploma in Social Work in Malaysia</p>
+                                <a class="btn btn-primary btn-lg btn-primary--yellow my-3" href="#registration">
+                                    Explore Now</a>
                             </div>
                         </div>
                     </div>
@@ -146,30 +154,45 @@
                     </div>
                     <div class="about__record row row-cols-1 justify-content-center text-center my-3">
                         <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/icon-learning.png" alt=""></figure>
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="64" src="../img/page-social/dsw-icon1.svg" alt="">
+                            </figure>
                             <h3 class="h6">Experiential Learning</h3>
                             <p class="text-muted">Two 16-week field placement sessions with various organisations such
                                 as Malaysian Care, Yayasan Chow Kit, Pink Triangle and many more to equip students with
                                 first-hand learning experience.</p>
                         </div>
                         <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/icon-professional.png" alt=""></figure>
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="64" src="../img/page-social/dsw-icon2.svg" alt="">
+                            </figure>
                             <h3 class="h6">Professional Academics</h3>
                             <p class="text-muted">Learn from a combination of both experienced and enthusiastic
                                 lecturers in the industry for over 20 years.</p>
                         </div>
                         <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/icon-masw.png" alt=""></figure>
-                            <h3 class="h6">Acquire Membership with MASW</h3>
-                            <p class="text-muted">Enable professional membership with the Malaysian Association of
-                                Social Workers.</p>
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="120" src="../img/page-social/icon-masw.png""
+                                alt="">
+                        </figure>
+                            <h3 class=" h6">Acquire Membership with MASW</h3>
+                                <p class="text-muted">Enable professional membership with the Malaysian Association of
+                                    Social Workers.</p>
                         </div>
                         <div class="col-6 col-md-3 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/icon-industry.png" alt=""></figure>
+                            <figure class="d-flex justify-content-center align-items-center m-0"
+                                style="min-height: 120px">
+                                <img style="aspect-ratio: 1/1" width="64" src="../img/page-social/aboutmckl-icon2.svg"
+                                    alt="">
+                            </figure>
                             <h3 class="h6">Industry Relevant Curriculum</h3>
                             <p class="text-muted">A competency-based educational programme designed in reference to the
                                 National Competency Standards for Social Work Practice (2010).</p>
                         </div>
+
                     </div>
 
                 </div>
@@ -235,199 +258,8 @@
 
 
             <section id="news_event" class="my-5 pt-3">
-                <div class="container">
-                    <div class="row pt-3 pb-3 justify-content-center">
-                        <div class="col-md-8 text-center text-md-center align-items-center order-2 order-md-1">
-                            <div class="scholarships__intro">
-                                <h2>News & Highlights</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about__record row row-cols-1 justify-content-center my-3">
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/news_1.jpg" alt=""></figure>
-                            <h3 class="h5">Making a career from doing good</h3>
-                            <p class="text-muted">The Star News</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#news-1"
-                                    style="position:absolute;bottom:0;">Read more</button>
-                            </ul>
-                            <!-- The Modal -->
-                            <div class="modal fade" id="news-1">
-                                <div class="modal-star_news modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Making a career from doing good</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <img src="../img/page-social/news_1-info.jpg" alt="">
-                                        </div>
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/news_2.jpg" alt=""></figure>
-                            <h3 class="h5">MCKL - First batch of social work students graduated</h3>
-                            <p class="text-muted">Sin Chew News</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#news-2">Read
-                                    more</button>
-                            </ul>
-                            <!-- The Modal -->
-                            <div class="modal fade" id="news-2">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">MCKL - First batch of social work students graduated
-                                            </h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <img src="../img/page-social/news_2-info.jpg" alt="">
-                                        </div>
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/news_3.jpg" alt=""></figure>
-                            <h3 class="h5">First Graduating Cohort from MCKL 2021</h3>
-                            <p class="text-muted">Graduating Picture</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#news-3"
-                                    style="position:absolute;bottom:0;">View image</button>
-                            </ul>
-                            <!-- The Modal -->
-                            <div class="modal fade" id="news-3">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">First Graduating Cohort from MCKL 2021</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <img src="../img/page-social/news_3-info.jpg" alt="">
-                                        </div>
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about__record row row-cols-1 justify-content-center my-3">
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/bernama.jpg" alt=""></figure>
-                            <h3 class="h5">MCKL Holds Inaugural Social Work Virtual Forum 2021</h3>
-                            <p class="text-muted">Bernama Press</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <a type="button" class="btn btn-primary"
-                                    href="https://www.bernama.com/en/press/news.php?id=1979039" target="_blank"
-                                    style="position:absolute;bottom:0;">Read more</a>
-                            </ul>
-                            <!-- The Modal -->
-                        </div>
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/cj.jpg" alt=""></figure>
-                            <h3 class="h5">MCKL holds inaugural social work virtual forum</h3>
-                            <p class="text-muted">Citizen Journal</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <a type="button" class="btn btn-primary"
-                                    href="https://cj.my/119887/mckl-holds-inaugural-social-work-virtual-forum/"
-                                    target="_blank">Read more</a>
-                            </ul>
-                            <!-- The Modal -->
-                        </div>
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/focus-malaysia.png" alt=""></figure>
-                            <h3 class="h5">Social workers: The “uncelebrated” professionals among us</h3>
-                            <p class="text-muted">Focus Malaysia</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <a type="button" class="btn btn-primary"
-                                    href="https://focusmalaysia.my/social-workers-the-uncelebrated-professionals-among-us/"
-                                    target="_blank" style="position:absolute;bottom:0;">Read more</a>
-                            </ul>
-                            <!-- The Modal -->
-                        </div>
-                    </div>
-                    <div class="about__record row row-cols-1 justify-content-center my-3">
-
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/news_7.png" alt=""></figure>
-                            <h3 class="h5">Knowledge and Skills are Essential for being a Professional Social Worker
-                            </h3>
-                            <p class="text-muted">Sin Chew News</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#news-7"
-                                    style="position:absolute;bottom:0;">Read more</button>
-                            </ul>
-                            <!-- The Modal -->
-                            <div class="modal fade" id="news-7">
-                                <div class="modal-star_news modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Knowledge and Skills are Essential for being a
-                                                Professional Social Worker</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <!-- Modal body -->
-                                        <div class="modal-body">
-                                            <img src="../img/page-social/news_7-info.jpg" alt="">
-                                        </div>
-                                        <!-- Modal footer -->
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 mb-2 mb-md-4">
-                            <figure><img src="../img/page-social/news_8.jpg" alt=""></figure>
-                            <h3 class="h5">Social Work Can Be A Profession And Not Just A Side Gig</h3>
-                            <p class="text-muted">Wiki Impact</p>
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <!-- Button trigger modal -->
-                                <a type="button" class="btn btn-primary"
-                                    href="https://www.wikiimpact.com/social-work-can-be-a-profession-and-not-just-a-side-gig/"
-                                    target="_blank">Read more</a>
-                            </ul>
-                            <!-- The Modal -->
-                        </div>
-
-                    </div>
-                </div>
+                <div id="SocialNews"></div>
+                
             </section>
 
             <section id="testimonial">
@@ -447,7 +279,8 @@
                 </div>
             </section>
 
-            <section id="youtube" class="my-5 pt-3 text-center">
+            <!-- 220408 disabled for DEVELOPMENT -->
+            <!-- <section id="youtube" class="my-5 pt-3 text-center">
                 <div class="container">
                     <div class="row pt-3 pb-3 justify-content-center">
                         <div class="col-md-8 align-items-center order-2 order-md-1">
@@ -481,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- industry partners -->
             <section id="highlights" class="my-5">
@@ -528,66 +361,22 @@
                                 <span class="d-inline-block">Methodist College Kuala Lumpur</span>
                                 <br>An Institution where values and tradition meet excellence in education!
                             </h3>
-                            <p>For over three decades, Methodist College Kuala Lumpur (MCKL) has been providing quality,
-                                holistic
-                                education in the best of Methodist tradition. MCKL fully embraces the challenges and
-                                opportunities of
-                                educating and preparing students for further education, professional development, and
-                                job
-                                careers in the
-                                new IR 4.0 environment.</p>
+                            <p>Having been in the education industry for over 39 years, Methodist College Kuala Lumpur
+                                (MCKL) has an excellent track record of providing quality, holistic education in the
+                                best of Methodist tradition. MCKL fully embraces the challenges and opportunities of
+                                educating and preparing students for further education, professional development and job
+                                careers in the new IR 4.0 environment.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- scholarships -->
-            <section id="scholarships" class="scholarships bg__grey py-5">
-                <div class="container">
-                    <div class="row row-cols-1 justify-content-center text-center my-3">
-                        <h3 class="h4 my-3">Over 39 years of Proven Track Record
-                        </h3>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-social/icon-globally.png" alt=""></figure>
-                            <h3 class="h6">Globally Recognised</h3>
-                            <p class="text-muted">Providing renowned professional pre-university and tertiary
-                                programmes.
-                            </p>
-                        </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-social/icon-internship.png" alt=""></figure>
-                            <h3 class="h6">Internship & Career Opportunities</h3>
-                            <p class="text-muted">Strong connection with industry partners to provide real-life working
-                                experience and seamless transition to employment.</p>
-                        </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-social/icon-platinum.png" alt=""></figure>
-                            <h3 class="h6">Industry Revolution 4.0</h3>
-                            <p class="text-muted">Operations & learning system in line with the IR 4.0 environment.</p>
-                        </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-social/icon-microsoft.png" alt=""></figure>
-                            <h3 class="h6">Microsoft Recognition</h3>
-                            <p class="text-muted">Providing flexibility with 100% blended learning via Microsoft cloud
-                                learning
-                                system.</p>
-                        </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-social/icon-mckl_dna.png" alt=""></figure>
-                            <h3 class="h6">MCKL DNA</h3>
-                            <p class="text-muted">Nurturing students with Character Formation and Service Learning
-                                programmes
-                                throughout their studies.</p>
-                        </div>
-                        <div class="col-6 col-md-4 mb-2 mb-md-4">
-                            <figure> <img src="../img/page-social/icon-nationally.png" alt=""></figure>
-                            <h3 class="h6">Nationally Accredited</h3>
-                            <p class="text-muted">With Recognition from the Misnistry of Women, Family, and Community
-                                Development for Contribution in Social Work Industry.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+            <include src="html/section-scholarship-social.html" locals='{
+            "section__class": "scholarships bg__grey py-5"
+        }'></include>
+
 
             <!-- registration -->
             <section id="registration" class="py-5 bg__blue--half">
@@ -597,8 +386,8 @@
                             <div class="row no-gutters">
                                 <div class="col-lg-6">
                                     <figure class="object-fit">
-                                        <img src="../img/page-social/form-support.jpg"
-                                            alt="Students having a field day at MCKL.">
+                                        <img src="../img/page-social/form_support-118618189_l.jpg"
+                                            alt="">
                                     </figure>
                                 </div>
                                 <div class="col-lg-6 p-4 py-5">
@@ -630,6 +419,8 @@
         <include src="html/footer.html" locals='{
             "footer__class": ""
         }'></include>
+
+        <aside id="FloatPopup"></aside>
 
     </div> <!-- site-container end -->
 
